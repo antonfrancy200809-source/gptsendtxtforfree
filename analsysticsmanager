@@ -1,0 +1,1706 @@
+.class public Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+.super Ljava/lang/Object;
+.source "AnalyticsManager.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/sitael/vending/manager/analytics/AnalyticsManager$Events;,
+        Lcom/sitael/vending/manager/analytics/AnalyticsManager$Params;,
+        Lcom/sitael/vending/manager/analytics/AnalyticsManager$Properties;
+    }
+.end annotation
+
+
+# static fields
+.field private static final DEBUG_LOGCAT:Z = false
+
+.field private static final TAG:Ljava/lang/String; = "AnalyticsManager"
+
+.field private static instance:Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+
+
+# instance fields
+.field private final firebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    .line 161
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 162
+    invoke-static {p1}, Lcom/google/firebase/analytics/FirebaseAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/firebase/analytics/FirebaseAnalytics;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->firebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
+
+    return-void
+.end method
+
+.method private getBrandIdBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 764
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 765
+    const-string v1, "brand_id"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private getBundleForError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 574
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 575
+    const-string v1, "message"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 576
+    const-string p1, "screen_name"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 577
+    const-string p1, "screen_class"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 578
+    const-string p1, "input_name"
+
+    invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private getCheckAppVersionBundle(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 784
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 785
+    const-string v1, "app_version"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 786
+    const-string p1, "os_version"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 787
+    const-string p1, "app_brand"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 788
+    const-string p1, "device_id"
+
+    invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static getInstance(Landroid/content/Context;)Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+    .locals 1
+
+    .line 155
+    sget-object v0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->instance:Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+
+    if-nez v0, :cond_0
+
+    .line 156
+    new-instance v0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+
+    invoke-direct {v0, p0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->instance:Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+
+    .line 157
+    :cond_0
+    sget-object p0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->instance:Lcom/sitael/vending/manager/analytics/AnalyticsManager;
+
+    return-object p0
+.end method
+
+.method private getInvitationCodeBundle(Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 672
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 673
+    const-string v1, "wallet"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 674
+    const-string p2, "type"
+
+    invoke-virtual {v0, p2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private getNewVerificationCode(Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 690
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 691
+    const-string v1, "type"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private getNfcTagConnectedDisconnectedBundle(Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 707
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 708
+    const-string v1, "tag_id"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 709
+    const-string p1, "wallet"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private getPrizeCollectedBundle(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 775
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 776
+    const-string v1, "id"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 777
+    const-string p1, "name"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 778
+    const-string p1, "brand_id"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 779
+    const-string p1, "points"
+
+    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method private getVendBundle(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 2
+
+    .line 497
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 498
+    const-string v1, "amount"
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 499
+    const-string p1, "currency"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p6, :cond_0
+
+    .line 501
+    const-string p1, "vending_machine_id"
+
+    invoke-virtual {v0, p1, p6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 502
+    :cond_0
+    const-string p1, "vending_machine_type"
+
+    invoke-virtual {v0, p1, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p7, :cond_1
+
+    .line 504
+    const-string p1, "campaign_type"
+
+    invoke-virtual {v0, p1, p7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 505
+    :cond_1
+    const-string p1, "brand_id"
+
+    invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p8, :cond_2
+
+    .line 507
+    const-string p1, "operating_office_id"
+
+    invoke-virtual {v0, p1, p8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    return-object v0
+.end method
+
+.method private logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+
+    .line 473
+    iget-object v0, p0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->firebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
+
+    invoke-virtual {v0, p1, p2}, Lcom/google/firebase/analytics/FirebaseAnalytics;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method private setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+    .locals 2
+
+    .line 457
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 458
+    const-string v1, "screen_name"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 459
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "screen_class"
+
+    invoke-virtual {v0, p2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 461
+    const-string p1, "screen_view"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method private setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 210
+    iget-object v0, p0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->firebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
+
+    invoke-virtual {v0, p1, p2}, Lcom/google/firebase/analytics/FirebaseAnalytics;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public logCashRechargeEvent(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 521
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 522
+    const-string v1, "amount"
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 523
+    const-string p1, "currency"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p6, :cond_0
+
+    .line 525
+    const-string p1, "vending_machine_id"
+
+    invoke-virtual {v0, p1, p6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 526
+    :cond_0
+    const-string p1, "type"
+
+    const-string p2, "cash"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 527
+    const-string p1, "vending_machine_type"
+
+    invoke-virtual {v0, p1, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 528
+    const-string p1, "brand_id"
+
+    invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p7, :cond_1
+
+    .line 530
+    const-string p1, "operating_office_id"
+
+    invoke-virtual {v0, p1, p7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 532
+    :cond_1
+    const-string p1, "recharge"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logCheckAppVersionFullScreen(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 793
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getCheckAppVersionBundle(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 794
+    const-string p2, "check_app_version_ko"
+
+    invoke-direct {p0, p2, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseInvitationCodeReedemed(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 664
+    const-string v0, "referrer"
+
+    invoke-direct {p0, v0, p3}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 665
+    const-string p3, "invitation_code_redeemed"
+
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getInvitationCodeBundle(Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-direct {p0, p3, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseNewUnlockCodeRequested(Ljava/lang/String;)V
+    .locals 1
+
+    .line 686
+    const-string v0, "new_unlock_code_requested"
+
+    invoke-direct {p0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getNewVerificationCode(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseNewVerificationCodeRequested(Ljava/lang/String;)V
+    .locals 1
+
+    .line 682
+    const-string v0, "verification_code_requested"
+
+    invoke-direct {p0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getNewVerificationCode(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseNfcTagConnected(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 699
+    const-string v0, "nfc_tag_connected"
+
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getNfcTagConnectedDisconnectedBundle(Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseNfcTagDisConnected(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 703
+    const-string v0, "nfc_tag_disconnected"
+
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getNfcTagConnectedDisconnectedBundle(Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingEmailVerified()V
+    .locals 2
+
+    .line 657
+    const-string v0, "email_verified"
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 570
+    const-string v0, "user_error"
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getBundleForError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingLogin(Ljava/lang/String;)V
+    .locals 2
+
+    .line 585
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 586
+    const-string v1, "method"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 587
+    const-string p1, "login"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingPhoneVerified()V
+    .locals 2
+
+    .line 649
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 650
+    const-string v1, "phone_verified"
+
+    invoke-direct {p0, v1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingSignUp(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 604
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 605
+    const-string v1, "method"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 606
+    const-string v1, "sign_up"
+
+    invoke-direct {p0, v1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 608
+    const-string v0, "sign_up_method"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 609
+    const-string p1, "sign_up_date"
+
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingStatus(Ljava/lang/String;)V
+    .locals 1
+
+    .line 617
+    const-string v0, "status"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingWalletEnabled(Ljava/lang/String;)V
+    .locals 2
+
+    .line 723
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 724
+    const-string v1, "wallet"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 725
+    const-string p1, "wallet_enabled"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseOnBoardingWalletSelect(Ljava/lang/String;)V
+    .locals 2
+
+    .line 732
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 733
+    const-string v1, "wallet"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 734
+    invoke-direct {p0, v1, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 735
+    const-string p1, "wallet_selected"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebasePurchase(DLjava/lang/String;)V
+    .locals 2
+
+    .line 559
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 560
+    const-string v1, "value"
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 561
+    const-string p1, "currency"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 563
+    const-string p1, "purchase"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseRefund(DLjava/lang/String;)V
+    .locals 2
+
+    .line 746
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 747
+    const-string v1, "value"
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 748
+    const-string p1, "currency"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 750
+    const-string p1, "refund"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logFirebaseSetPropertiesAfterLegalContent(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 639
+    const-string v0, "marketing"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 640
+    const-string p1, "profiling"
+
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public logFirebaseSetPropertiesAfterToken(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 627
+    const-string v0, "operating_office"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 628
+    const-string p1, "marketing"
+
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 629
+    const-string p1, "profiling"
+
+    invoke-direct {p0, p1, p3}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 630
+    const-string p1, "services_loyalty"
+
+    invoke-direct {p0, p1, p4}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public logFirebaseUnlockCode(Ljava/lang/String;)V
+    .locals 2
+
+    .line 591
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 592
+    const-string v1, "USER_INFO_NOT_CONFIRMED"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 593
+    const-string p1, "sign_up_code"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    .line 594
+    :cond_0
+    const-string v1, "REGISTRATION_COMPLETED"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 595
+    const-string p1, "login_code"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 597
+    :cond_1
+    :goto_0
+    const-string p1, "login"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logLoyaltyDisabledEvent(Ljava/lang/String;)V
+    .locals 1
+
+    .line 754
+    invoke-direct {p0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getBrandIdBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 755
+    const-string v0, "loyalty_disabled"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logLoyaltyEnabledEvent(Ljava/lang/String;)V
+    .locals 1
+
+    .line 759
+    invoke-direct {p0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getBrandIdBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 760
+    const-string v0, "loyalty_enabled"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logLoyaltyPrizeCollected(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 770
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getPrizeCollectedBundle(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 771
+    const-string p2, "prize_collected"
+
+    invoke-direct {p0, p2, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logOnlineRechargeEvent(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 543
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 544
+    const-string v1, "amount"
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 545
+    const-string p1, "currency"
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 546
+    const-string p1, "brand_id"
+
+    invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 547
+    const-string p1, "type"
+
+    invoke-virtual {v0, p1, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 549
+    const-string p1, "recharge"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logSignUpLegals(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 229
+    const-string v0, "sign_up_legals"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public logSignUpMarketingEvent(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 233
+    const-string v0, "sign_up_marketing"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public logVendEvent(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 487
+    invoke-direct/range {p0 .. p8}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getVendBundle(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    move-object p2, p0
+
+    .line 488
+    const-string p3, "vend"
+
+    invoke-direct {p0, p3, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public logVendRefundEvent(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 492
+    invoke-direct/range {p0 .. p8}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->getVendBundle(DLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    move-object p2, p0
+
+    .line 493
+    const-string p3, "vend_refund"
+
+    invoke-direct {p0, p3, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public resetUserInfo()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 198
+    invoke-virtual {p0, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserInfo(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setUserInfo(Ljava/lang/String;)V
+    .locals 1
+
+    .line 191
+    iget-object v0, p0, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->firebaseAnalytics:Lcom/google/firebase/analytics/FirebaseAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/google/firebase/analytics/FirebaseAnalytics;->setUserId(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackBrand(Ljava/lang/String;)V
+    .locals 1
+
+    .line 179
+    const-string v0, "brand"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackEnvironment()V
+    .locals 3
+
+    .line 168
+    const-string v0, "release"
+
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "prod"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 169
+    const-string v0, "PROD"
+
+    goto :goto_0
+
+    .line 170
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "testing"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 171
+    const-string v0, "TEST"
+
+    goto :goto_0
+
+    .line 173
+    :cond_1
+    const-string v0, "DEV"
+
+    .line 174
+    :goto_0
+    const-string v1, "environment"
+
+    invoke-direct {p0, v1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 175
+    const-string v1, "brand"
+
+    invoke-direct {p0, v1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackGiftCardDetail(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 319
+    const-string v0, "gift_card_detail"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackGiftCardList(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 315
+    const-string v0, "gift_cards_list"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackGiftCardPurchase(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 324
+    new-instance p5, Landroid/os/Bundle;
+
+    invoke-direct {p5}, Landroid/os/Bundle;-><init>()V
+
+    .line 326
+    const-string v0, "affiliation"
+
+    invoke-virtual {p5, v0, p6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 327
+    const-string p6, "value"
+
+    invoke-virtual {p7}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v0
+
+    invoke-virtual {p5, p6, v0, v1}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 328
+    const-string p6, "currency"
+
+    invoke-virtual {p5, p6, p8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 329
+    const-string p6, "payment_type"
+
+    invoke-virtual {p5, p6, p9}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 331
+    new-instance p6, Ljava/util/ArrayList;
+
+    invoke-direct {p6}, Ljava/util/ArrayList;-><init>()V
+
+    .line 332
+    new-instance p8, Landroid/os/Bundle;
+
+    invoke-direct {p8}, Landroid/os/Bundle;-><init>()V
+
+    .line 334
+    const-string p9, "item_id"
+
+    invoke-virtual {p8, p9, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 335
+    const-string p1, "item_name"
+
+    invoke-virtual {p8, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 336
+    const-string p1, "item_category"
+
+    invoke-virtual {p8, p1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 337
+    const-string p1, "item_variant"
+
+    invoke-virtual {p8, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 338
+    const-string p1, "price"
+
+    invoke-virtual {p7}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide p2
+
+    invoke-virtual {p8, p1, p2, p3}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 340
+    invoke-virtual {p6, p8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 341
+    const-string p1, "items"
+
+    invoke-virtual {p5, p1, p6}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    .line 343
+    const-string p1, "purchase"
+
+    invoke-direct {p0, p1, p5}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public trackHomepage(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 402
+    const-string v0, "homepage"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackLoyaltyHelpPage(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 418
+    const-string v0, "loyalty_help"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackLoyaltyOnBoarding(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 423
+    const-string v0, "loyalty_onboarding"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackLoyaltyPrizeDetail(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 435
+    const-string v0, "loyalty_prize_detail"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackLoyaltyPrizes(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 431
+    const-string v0, "loyalty_prizes"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackLoyaltySettingsPage(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 410
+    const-string v0, "loyalty_settings"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackLoyaltyTermsPage(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 414
+    const-string v0, "loyalty_terms"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackNotifications(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 439
+    const-string v0, "notifications"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackNotificationsDetail(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 444
+    const-string v0, "notifications_detail"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingConnectPaymentMethod(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 279
+    const-string v0, "onboarding_connect_payment_method"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingIntro(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 271
+    const-string v0, "onboarding_intro"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingInviteCode(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 275
+    const-string v0, "onboarding_invite_code"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingQrScan(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 291
+    const-string v0, "onboarding_connect_qr_scan"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingScanNfc(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 283
+    const-string v0, "onboarding_scan_nfc"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingVmSearch(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 287
+    const-string v0, "onboarding_connect_vm_search"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingWalletCreation(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 299
+    const-string v0, "onboarding_wallet_creation"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingWalletPermissionMarketing(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 303
+    const-string v0, "onboarding_wallet_permission_marketing"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingWalletPermissionProfiling(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 307
+    const-string v0, "onboarding_wallet_permission_profiling"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingWalletPermissionThirdParties(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 311
+    const-string v0, "onboarding_wallet_permission_third_parties"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackOnBoardingWalletSelection(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 295
+    const-string v0, "onboarding_wallet_selection"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackScreenView(Landroid/app/Activity;Ljava/lang/String;)V
+    .locals 0
+
+    .line 448
+    invoke-direct {p0, p1, p2}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackServices(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 406
+    const-string v0, "services"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackServicesLoyalty(Ljava/lang/String;)V
+    .locals 1
+
+    .line 427
+    const-string v0, "services_loyalty"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignInLoginPhone(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 394
+    const-string v0, "login_phone"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignInLoginPhoneVerificationCode(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 398
+    const-string v0, "login_phone_verification_code"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUp(Ljava/lang/String;)V
+    .locals 2
+
+    .line 218
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 219
+    const-string v1, "method"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 220
+    const-string v1, "sign_up"
+
+    invoke-direct {p0, v1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 222
+    const-string v0, "sign_up_method"
+
+    invoke-direct {p0, v0, p1}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setUserProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpAccount(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 242
+    const-string v0, "sign_up_account"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpEmailVerificationCode(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 262
+    const-string v0, "sign_up_email_verification_code"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpEmailVerificationError(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 266
+    const-string v0, "sign_up_email_verification_error"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpEmailVerificationWall(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 258
+    const-string v0, "sign_up_email_verification_wall"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpPhoneNumber(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 237
+    const-string v0, "sign_up_phone_number"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpPhonePin(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 386
+    const-string v0, "sign_up_phone_pin"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpPhonePrefix(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 246
+    const-string v0, "sign_up_phone_prefix"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpPhoneVerificationCode(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 250
+    const-string v0, "sign_up_phone_verification_code"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSignUpProfile(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 254
+    const-string v0, "sign_up_profile"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackSplashScreen(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 390
+    const-string v0, "splashscreen"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->setCurrentScreen(Landroid/app/Activity;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public trackViewItemEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 347
+    new-instance p5, Landroid/os/Bundle;
+
+    invoke-direct {p5}, Landroid/os/Bundle;-><init>()V
+
+    .line 349
+    const-string v0, "currency"
+
+    invoke-virtual {p5, v0, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 351
+    new-instance p3, Ljava/util/ArrayList;
+
+    invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 352
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 354
+    const-string v1, "item_id"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 355
+    const-string p1, "item_name"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 356
+    const-string p1, "item_category"
+
+    invoke-virtual {v0, p1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 358
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 360
+    const-string p1, "items"
+
+    invoke-virtual {p5, p1, p3}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    .line 362
+    const-string p1, "view_item"
+
+    invoke-direct {p0, p1, p5}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public trackViewItemListEvent(Ljava/util/ArrayList;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Lcom/sitael/vending/model/dto/ShoppingCatalogRetailerCard;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 366
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 368
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v2, 0x0
+
+    .line 371
+    :goto_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_0
+
+    .line 372
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    .line 373
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/sitael/vending/model/dto/ShoppingCatalogRetailerCard;
+
+    invoke-virtual {v4}, Lcom/sitael/vending/model/dto/ShoppingCatalogRetailerCard;->getRetailerId()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "item_id"
+
+    invoke-virtual {v3, v5, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 374
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/sitael/vending/model/dto/ShoppingCatalogRetailerCard;
+
+    invoke-virtual {v4}, Lcom/sitael/vending/model/dto/ShoppingCatalogRetailerCard;->getRetailerName()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "item_name"
+
+    invoke-virtual {v3, v5, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 375
+    const-string v4, "item_category"
+
+    const-string v5, "gift_card"
+
+    invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 376
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 378
+    :cond_0
+    const-string p1, "items"
+
+    invoke-virtual {v0, p1, v1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    .line 380
+    const-string p1, "view_item_list"
+
+    invoke-direct {p0, p1, v0}, Lcom/sitael/vending/manager/analytics/AnalyticsManager;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
