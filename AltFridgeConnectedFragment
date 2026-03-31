@@ -1,0 +1,2202 @@
+.class public final Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;
+.super Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/Hilt_AltFridgeConnectedFragment;
+.source "AltFridgeConnectedFragment.kt"
+
+
+# annotations
+.annotation runtime Ldagger/hilt/android/AndroidEntryPoint;
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nAltFridgeConnectedFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AltFridgeConnectedFragment.kt\ncom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment\n+ 2 FragmentViewModelLazy.kt\nandroidx/fragment/app/FragmentViewModelLazyKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,236:1\n106#2,15:237\n327#3,4:252\n257#3,2:256\n257#3,2:258\n257#3,2:260\n257#3,2:262\n257#3,2:264\n257#3,2:266\n257#3,2:268\n*S KotlinDebug\n*F\n+ 1 AltFridgeConnectedFragment.kt\ncom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment\n*L\n45#1:237,15\n70#1:252,4\n106#1:256,2\n109#1:258,2\n112#1:260,2\n140#1:262,2\n143#1:264,2\n146#1:266,2\n152#1:268,2\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0007\u0018\u00002\u00020\u0001B\t\u0008\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0010\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0016J\u001a\u0010\u0013\u001a\u00020\u00102\u0006\u0010\u0014\u001a\u00020\u00152\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J$\u0010\u0018\u001a\u00020\u00152\u0006\u0010\u0019\u001a\u00020\u001a2\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u001c2\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J\u0008\u0010\u001d\u001a\u00020\u0010H\u0002J\u0008\u0010\u001e\u001a\u00020\u0010H\u0002R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0006\u001a\u00020\u00058BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\u0008R\u001b\u0010\t\u001a\u00020\n8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\r\u0010\u000e\u001a\u0004\u0008\u000b\u0010\u000c\u00a8\u0006\u001f"
+    }
+    d2 = {
+        "Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;",
+        "Lcom/sitael/vending/ui/base/BaseMvvmFragment;",
+        "<init>",
+        "()V",
+        "_binding",
+        "Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;",
+        "binding",
+        "getBinding",
+        "()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;",
+        "viewModel",
+        "Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;",
+        "getViewModel",
+        "()Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;",
+        "viewModel$delegate",
+        "Lkotlin/Lazy;",
+        "onAttach",
+        "",
+        "context",
+        "Landroid/content/Context;",
+        "onViewCreated",
+        "view",
+        "Landroid/view/View;",
+        "savedInstanceState",
+        "Landroid/os/Bundle;",
+        "onCreateView",
+        "inflater",
+        "Landroid/view/LayoutInflater;",
+        "container",
+        "Landroid/view/ViewGroup;",
+        "setupListeners",
+        "observeViewModel",
+        "mobile_argentaProductionGmsRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
+
+
+# instance fields
+.field private _binding:Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+.field private final viewModel$delegate:Lkotlin/Lazy;
+
+
+# direct methods
+.method public static synthetic $r8$lambda$03bgi3syY0byEIdBB-KxR5Hsh-8(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$18(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$06KWFHPyjQ6g96kxDMpy0jliwbc(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$11(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$1rMSWQUvKBa3SwsTb83CAW-5xEg(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$3(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$2r-sWz38KDAt2qysOXIcnWvIVhM(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Float;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$13(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Float;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$36MlWnRmTdkc1df4_vcdxqs9ttw(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$10(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$4p2sh26NOsdAZwuNnCDZqHbq48E(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$7(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$5Ocw7H7RFFjrvqzVlL66626c4LM(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lkotlin/Pair;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$19(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lkotlin/Pair;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$5Tq7L-_L14xJbo8FsY7u0G1oxCE(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/String;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$25(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/String;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$7h6TB8FqgSkH11hFojiBLseqcpY(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$8(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$FUbUljBi1iDTcKQRTbzqdafIhtc(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$24(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$QRqt50mZ_SgAQjYaqUoZOuakZkM(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Landroid/view/View;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->setupListeners$lambda$2(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$RIO4TKUAXSpH5P4_3dGr4-0v8tA(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$27(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$_2oLNcJuc6LYoKpfHrtKZqNQvOM(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->onCreateView$lambda$1(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$_EldZ70-b7qZfGTbWOeO4zNw_RA(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$21(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$adOZgN0zZ55EPODiIjZRFA5c3lI(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$14(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$fH5TL2TinMfipyDS1RVRhAVP9Cg(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$4(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$fN3UsrO7muT7kQZpPt8QuB_ZuMg(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$5(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$gf0XiiZJMHFHWbT2amwTguteWJI(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$15(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$gws9aFsdslA52Zt6QUlakP0y1iA(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Float;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$9(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Float;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$kFqTTp_iN5Z6bCljDYRn5aUYEuA(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$6(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$lQDeYelOUmdS4LYr_anPq4fbgLw(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$22(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$npljciLuSt2a5bQDAaq5TP4vOTQ(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$12(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$qo4bKgubs9x7VcuDJU-OBya7vDw(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$23(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$u6WP6sjJS2qKiGD-eqIF6uLq_uo(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lkotlin/Pair;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel$lambda$28$lambda$16(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lkotlin/Pair;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 6
+
+    .line 39
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/Hilt_AltFridgeConnectedFragment;-><init>()V
+
+    .line 45
+    move-object v0, p0
+
+    check-cast v0, Landroidx/fragment/app/Fragment;
+
+    .line 238
+    new-instance v1, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$1;
+
+    invoke-direct {v1, v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$1;-><init>(Landroidx/fragment/app/Fragment;)V
+
+    check-cast v1, Lkotlin/jvm/functions/Function0;
+
+    .line 242
+    sget-object v2, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$2;
+
+    invoke-direct {v3, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$2;-><init>(Lkotlin/jvm/functions/Function0;)V
+
+    check-cast v3, Lkotlin/jvm/functions/Function0;
+
+    invoke-static {v2, v3}, Lkotlin/LazyKt;->lazy(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v1
+
+    .line 243
+    const-class v2, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$3;
+
+    invoke-direct {v3, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$3;-><init>(Lkotlin/Lazy;)V
+
+    check-cast v3, Lkotlin/jvm/functions/Function0;
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$4;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$4;-><init>(Lkotlin/jvm/functions/Function0;Lkotlin/Lazy;)V
+
+    check-cast v4, Lkotlin/jvm/functions/Function0;
+
+    new-instance v5, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$5;
+
+    invoke-direct {v5, v0, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$special$$inlined$viewModels$default$5;-><init>(Landroidx/fragment/app/Fragment;Lkotlin/Lazy;)V
+
+    check-cast v5, Lkotlin/jvm/functions/Function0;
+
+    invoke-static {v0, v2, v3, v4, v5}, Landroidx/fragment/app/FragmentViewModelLazyKt;->createViewModelLazy(Landroidx/fragment/app/Fragment;Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v0
+
+    .line 45
+    iput-object v0, p0, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->viewModel$delegate:Lkotlin/Lazy;
+
+    return-void
+.end method
+
+.method private final getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+    .locals 1
+
+    .line 43
+    iget-object v0, p0, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->_binding:Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method private final getViewModel()Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+    .locals 1
+
+    .line 45
+    iget-object v0, p0, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->viewModel$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+
+    return-object v0
+.end method
+
+.method private final observeViewModel()V
+    .locals 5
+
+    .line 103
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewModel()Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+
+    move-result-object v0
+
+    .line 104
+    move-object v1, v0
+
+    check-cast v1, Lcom/sitael/vending/ui/base/BaseViewModel;
+
+    invoke-super {p0, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/Hilt_AltFridgeConnectedFragment;->observeViewModel(Lcom/sitael/vending/ui/base/BaseViewModel;)V
+
+    .line 105
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getStartUnlockSpinner()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda16;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda16;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 108
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getUnlockAnimationVisibile()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda4;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda4;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 111
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getSuccessAnimationVisible()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda7;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda7;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 116
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getDescriptionVisible()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda8;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda8;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 129
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getAnimationRaw()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda9;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda9;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 133
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getAnimationRepeat()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda10;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda10;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 136
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getAnimationSpeed()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda12;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda12;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 139
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getDisconnectVisible()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda13;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda13;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 142
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getSelectNewVmVisible()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda14;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda14;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 145
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getCloseVisible()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda15;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda15;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 148
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getCardAlpha()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda17;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda17;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 151
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getRetryVisible()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda18;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda18;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 154
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getStatusText()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda19;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda19;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 157
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getCardHeaderBackground()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda20;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda20;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 161
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getCloseNavigation()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda21;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda21;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 168
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getTitleSerialText()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda22;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda22;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 185
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getReceiptNavigation()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda23;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda23;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 192
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getVmTypeIcon()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda1;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda1;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 196
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getModeIcon()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda2;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda2;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 199
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getModeLabelRes()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda3;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda3;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 202
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getCurrencyCredit()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda5;
+
+    invoke-direct {v3, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda5;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v4, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v4, v3}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v1, v2, v4}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    .line 223
+    invoke-virtual {v0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getLogoutNavigation()Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda6;
+
+    invoke-direct {v2, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda6;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    new-instance v3, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;
+
+    invoke-direct {v3, v2}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$sam$androidx_lifecycle_Observer$0;-><init>(Lkotlin/jvm/functions/Function1;)V
+
+    check-cast v3, Landroidx/lifecycle/Observer;
+
+    invoke-virtual {v0, v1, v3}, Landroidx/lifecycle/MutableLiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+
+    return-void
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$10(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 140
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->disconnectBtn:Landroid/widget/Button;
+
+    const-string v0, "disconnectBtn"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/View;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    .line 262
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 141
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$11(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 0
+
+    const-string p1, "this$0"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 143
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->selectNewBtn:Landroid/widget/Button;
+
+    const-string p1, "selectNewBtn"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/View;
+
+    const/16 p1, 0x8
+
+    .line 264
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 144
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$12(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 146
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->closeImg:Landroid/widget/ImageView;
+
+    const-string v0, "closeImg"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/View;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    .line 266
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 147
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$13(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Float;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 149
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->infoLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setAlpha(F)V
+
+    .line 150
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$14(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 152
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->retryBtn:Landroid/widget/Button;
+
+    const-string v0, "retryBtn"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/View;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    .line 268
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 153
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$15(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 155
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->statusTxt:Landroid/widget/TextView;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
+
+    .line 156
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$16(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lkotlin/Pair;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 158
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p1
+
+    .line 159
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->statusLayout:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setBackgroundColor(I)V
+
+    .line 160
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$18(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    .line 162
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/utils/Event;->getContentIfNotHandledOrReturnNull()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkotlin/Unit;
+
+    if-eqz p1, :cond_0
+
+    .line 163
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewModel()Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getUtils()Lcom/sitael/vending/ui/alt_fridge/AltFridgeUtils/AltFridgeUtil;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeUtils/AltFridgeUtil;->resetAll()V
+
+    .line 164
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->finish()V
+
+    .line 166
+    :cond_0
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$19(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lkotlin/Pair;)Lkotlin/Unit;
+    .locals 5
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 169
+    new-instance v0, Lcom/binaryfork/spanny/Spanny;
+
+    invoke-virtual {p1}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-direct {v0, v1}, Lcom/binaryfork/spanny/Spanny;-><init>(Ljava/lang/CharSequence;)V
+
+    .line 170
+    invoke-virtual {p1}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 171
+    const-string v1, "\n"
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Lcom/binaryfork/spanny/Spanny;->append(Ljava/lang/CharSequence;)Lcom/binaryfork/spanny/Spanny;
+
+    move-result-object v1
+
+    .line 172
+    invoke-virtual {p1}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    .line 173
+    new-instance v2, Lcom/sitael/vending/ui/widget/custom/CustomTypefaceSpan;
+
+    .line 175
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const/high16 v4, 0x7f090000
+
+    .line 174
+    invoke-static {v3, v4}, Landroidx/core/content/res/ResourcesCompat;->getFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
+
+    move-result-object v3
+
+    .line 173
+    invoke-direct {v2, v3}, Lcom/sitael/vending/ui/widget/custom/CustomTypefaceSpan;-><init>(Landroid/graphics/Typeface;)V
+
+    .line 171
+    invoke-virtual {v1, p1, v2}, Lcom/binaryfork/spanny/Spanny;->append(Ljava/lang/CharSequence;Ljava/lang/Object;)Lcom/binaryfork/spanny/Spanny;
+
+    .line 181
+    :cond_0
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->titleTxt:Landroid/widget/TextView;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 182
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$21(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    .line 186
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/utils/Event;->getContentIfNotHandledOrReturnNull()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkotlin/Unit;
+
+    if-eqz p1, :cond_0
+
+    .line 187
+    sget-object p1, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragmentDirections;->Companion:Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragmentDirections$Companion;
+
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragmentDirections$Companion;->goToAltFridgeReceipt()Landroidx/navigation/NavDirections;
+
+    move-result-object p1
+
+    .line 188
+    check-cast p0, Landroidx/fragment/app/Fragment;
+
+    invoke-static {p0}, Landroidx/navigation/fragment/FragmentKt;->findNavController(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroidx/navigation/NavController;->navigate(Landroidx/navigation/NavDirections;)V
+
+    .line 190
+    :cond_0
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$22(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 193
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->vmTypeImg:Landroid/widget/ImageView;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 194
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$23(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 197
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->modeImg:Landroid/widget/ImageView;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 198
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$24(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 200
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->modeTxt:Landroid/widget/TextView;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
+
+    .line 201
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$25(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/String;)Lkotlin/Unit;
+    .locals 6
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 203
+    new-instance v0, Lcom/binaryfork/spanny/Spanny;
+
+    const v1, 0x7f1401c2
+
+    invoke-virtual {p0, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-direct {v0, v1}, Lcom/binaryfork/spanny/Spanny;-><init>(Ljava/lang/CharSequence;)V
+
+    .line 204
+    const-string v1, "\n"
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Lcom/binaryfork/spanny/Spanny;->append(Ljava/lang/CharSequence;)Lcom/binaryfork/spanny/Spanny;
+
+    move-result-object v0
+
+    .line 205
+    check-cast p1, Ljava/lang/CharSequence;
+
+    .line 206
+    new-instance v1, Landroid/text/style/RelativeSizeSpan;
+
+    const v2, 0x3fd5c28f    # 1.67f
+
+    invoke-direct {v1, v2}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
+
+    .line 207
+    new-instance v2, Lcom/sitael/vending/ui/widget/custom/CustomTypefaceSpan;
+
+    .line 209
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const/high16 v4, 0x7f090000
+
+    .line 208
+    invoke-static {v3, v4}, Landroidx/core/content/res/ResourcesCompat;->getFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
+
+    move-result-object v3
+
+    .line 207
+    invoke-direct {v2, v3}, Lcom/sitael/vending/ui/widget/custom/CustomTypefaceSpan;-><init>(Landroid/graphics/Typeface;)V
+
+    .line 213
+    new-instance v3, Landroid/text/style/ForegroundColorSpan;
+
+    .line 215
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const v5, 0x7f0600c9
+
+    .line 214
+    invoke-static {v4, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result v4
+
+    .line 213
+    invoke-direct {v3, v4}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 204
+    invoke-virtual {v0, p1, v1}, Lcom/binaryfork/spanny/Spanny;->append(Ljava/lang/CharSequence;[Ljava/lang/Object;)Lcom/binaryfork/spanny/Spanny;
+
+    move-result-object p1
+
+    .line 220
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->creditTxt:Landroid/widget/TextView;
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 221
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$27(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Lcom/sitael/vending/ui/utils/Event;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    .line 224
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/utils/Event;->getContentIfNotHandledOrReturnNull()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkotlin/Unit;
+
+    if-eqz p1, :cond_0
+
+    .line 225
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewModel()Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->getUtils()Lcom/sitael/vending/ui/alt_fridge/AltFridgeUtils/AltFridgeUtil;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeUtils/AltFridgeUtil;->resetAll()V
+
+    .line 227
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->finish()V
+
+    .line 229
+    :cond_0
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$3(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 106
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->spinner:Landroid/widget/ProgressBar;
+
+    const-string v0, "spinner"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/View;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    .line 256
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 107
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$4(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 109
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->unlocking:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    const-string v0, "unlocking"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/View;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    .line 258
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 110
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$5(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 2
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 112
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->successAnim:Lcom/airbnb/lottie/LottieAnimationView;
+
+    const-string v1, "successAnim"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x8
+
+    .line 260
+    :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 113
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 114
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->successAnim:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
+
+    .line 115
+    :cond_1
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$6(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Boolean;)Lkotlin/Unit;
+    .locals 3
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 117
+    invoke-static {}, Lcom/sitael/vending/manager/preferences/SharedPreferenceManager;->get()Lcom/sitael/vending/manager/preferences/SharedPreferenceManager;
+
+    move-result-object v0
+
+    .line 119
+    const-string v1, "FRIDGE_DOOR_UNLOCK_TIMEOUT"
+
+    const/16 v2, 0xf
+
+    .line 118
+    invoke-virtual {v0, v1, v2}, Lcom/sitael/vending/manager/preferences/SharedPreferenceManager;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 122
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->descriptionTxt:Landroid/widget/TextView;
+
+    const v2, 0x7f140559
+
+    .line 123
+    invoke-virtual {p0, v2}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 124
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 122
+    invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 126
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->descriptionTxt:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x4
+
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 127
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$7(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 130
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->loadingAnim:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
+
+    .line 131
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->loadingAnim:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
+
+    .line 132
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$8(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Integer;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 134
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->loadingAnim:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setRepeatCount(I)V
+
+    .line 135
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final observeViewModel$lambda$28$lambda$9(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Ljava/lang/Float;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 137
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->loadingAnim:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setSpeed(F)V
+
+    .line 138
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final onCreateView$lambda$1(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+    .locals 3
+
+    const-string v0, "v"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "windowInsets"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 69
+    invoke-static {}, Landroidx/core/view/WindowInsetsCompat$Type;->systemBars()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroidx/core/view/WindowInsetsCompat;->getInsets(I)Landroidx/core/graphics/Insets;
+
+    move-result-object p1
+
+    const-string v0, "getInsets(...)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 252
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    check-cast v0, Landroid/view/ViewGroup$LayoutParams;
+
+    .line 253
+    move-object v1, v0
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 71
+    iget v2, p1, Landroidx/core/graphics/Insets;->left:I
+
+    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    .line 72
+    iget v2, p1, Landroidx/core/graphics/Insets;->bottom:I
+
+    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 73
+    iget p1, p1, Landroidx/core/graphics/Insets;->right:I
+
+    iput p1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    .line 254
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 75
+    sget-object p0, Landroidx/core/view/WindowInsetsCompat;->CONSUMED:Landroidx/core/view/WindowInsetsCompat;
+
+    return-object p0
+
+    .line 252
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method private final setupListeners()V
+    .locals 3
+
+    .line 85
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->useTxt:Landroid/widget/TextView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 86
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->vmTitleTxt:Landroid/widget/TextView;
+
+    const v1, 0x7f1409d3
+
+    invoke-virtual {p0, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 87
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->vmSubtitleTxt:Landroid/widget/TextView;
+
+    const v1, 0x7f1409d4
+
+    invoke-virtual {p0, v1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 88
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->creditFreeUseLayout:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setVisibility(I)V
+
+    .line 90
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->mainAppImage:Landroid/widget/ImageView;
+
+    const v2, 0x7f080317
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 91
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->mainAppImage:Landroid/widget/ImageView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 93
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->alert:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setVisibility(I)V
+
+    .line 94
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->unlocking:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    invoke-virtual {v0, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setVisibility(I)V
+
+    .line 96
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->closeImg:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 97
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->closeImg:Landroid/widget/ImageView;
+
+    new-instance v1, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda0;
+
+    invoke-direct {v1, p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda0;-><init>(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method private static final setupListeners$lambda$2(Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;Landroid/view/View;)V
+    .locals 0
+
+    const-string p1, "this$0"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 98
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->finish()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAttach(Landroid/content/Context;)V
+    .locals 2
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 48
+    invoke-super {p0, p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/Hilt_AltFridgeConnectedFragment;->onAttach(Landroid/content/Context;)V
+
+    .line 49
+    new-instance p1, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$onAttach$callback$1;
+
+    invoke-direct {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$onAttach$callback$1;-><init>()V
+
+    check-cast p1, Landroidx/activity/OnBackPressedCallback;
+
+    .line 54
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getOnBackPressedDispatcher()Landroidx/activity/OnBackPressedDispatcher;
+
+    move-result-object v0
+
+    move-object v1, p0
+
+    check-cast v1, Landroidx/lifecycle/LifecycleOwner;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/activity/OnBackPressedDispatcher;->addCallback(Landroidx/lifecycle/LifecycleOwner;Landroidx/activity/OnBackPressedCallback;)V
+
+    return-void
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 0
+
+    const-string p3, "inflater"
+
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p3, 0x0
+
+    .line 67
+    invoke-static {p1, p2, p3}, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->_binding:Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    .line 68
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->selectionContainer:Landroid/widget/LinearLayout;
+
+    check-cast p1, Landroid/view/View;
+
+    new-instance p2, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda11;
+
+    invoke-direct {p2}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment$$ExternalSyntheticLambda11;-><init>()V
+
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setOnApplyWindowInsetsListener(Landroid/view/View;Landroidx/core/view/OnApplyWindowInsetsListener;)V
+
+    .line 78
+    invoke-virtual {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Activity;
+
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lcom/sitael/vending/util/ViewUtil;->enableDisableTouchInView(Landroid/app/Activity;Z)V
+
+    .line 79
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getBinding()Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/sitael/vending/databinding/AltFridgeConnectedFragmentBinding;->getRoot()Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    move-result-object p1
+
+    const-string p2, "getRoot(...)"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p1, Landroid/view/View;
+
+    return-object p1
+.end method
+
+.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    .locals 1
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 59
+    invoke-super {p0, p1, p2}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/Hilt_AltFridgeConnectedFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+
+    .line 60
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->setupListeners()V
+
+    .line 61
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->observeViewModel()V
+
+    .line 62
+    invoke-direct {p0}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedFragment;->getViewModel()Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/sitael/vending/ui/alt_fridge/AltFridgeConnected/AltFridgeConnectedViewModel;->initialize()V
+
+    return-void
+.end method
