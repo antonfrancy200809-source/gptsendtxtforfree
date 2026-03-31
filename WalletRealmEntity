@@ -1,0 +1,3202 @@
+.class public Lcom/sitael/vending/persistence/entity/WalletRealmEntity;
+.super Lio/realm/RealmObject;
+.source "WalletRealmEntity.kt"
+
+# interfaces
+.implements Lio/realm/com_sitael_vending_persistence_entity_WalletRealmEntityRealmProxyInterface;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0010\u0006\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008{\n\u0002\u0018\u0002\n\u0002\u0008\u0012\u0008\u0017\u0018\u00002\u00020\u0001B\u00e7\u0003\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\r\u001a\u00020\u000e\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u0003\u0012\u0008\u0008\u0002\u0010\u0011\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u0012\u001a\u00020\u0013\u0012\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u0013\u0012\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u0016\u001a\u00020\u0013\u0012\n\u0008\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u0003\u0012\u0008\u0008\u0002\u0010\u0018\u001a\u00020\u0019\u0012\u0008\u0008\u0002\u0010\u001a\u001a\u00020\u0019\u0012\n\u0008\u0002\u0010\u001b\u001a\u0004\u0018\u00010\u0007\u0012\u0010\u0008\u0002\u0010\u001c\u001a\n\u0012\u0004\u0012\u00020\u001e\u0018\u00010\u001d\u0012\u0008\u0008\u0002\u0010\u001f\u001a\u00020\u0019\u0012\u0008\u0008\u0002\u0010 \u001a\u00020\u0019\u0012\u0008\u0008\u0002\u0010!\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\"\u001a\u00020\u0007\u0012\n\u0008\u0002\u0010#\u001a\u0004\u0018\u00010$\u0012\u0008\u0008\u0002\u0010%\u001a\u00020\u0019\u0012\n\u0008\u0002\u0010&\u001a\u0004\u0018\u00010\u0003\u0012\u0010\u0008\u0002\u0010\'\u001a\n\u0012\u0004\u0012\u00020(\u0018\u00010\u001d\u0012\n\u0008\u0002\u0010)\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010*\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010+\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0008\u0002\u0010,\u001a\u00020\u0019\u0012\n\u0008\u0002\u0010-\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010.\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010/\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0008\u0002\u00100\u001a\u00020\u0019\u0012\u0008\u0008\u0002\u00101\u001a\u00020\u0019\u0012\u0008\u0008\u0002\u00102\u001a\u00020\u0019\u0012\u0008\u0008\u0002\u00103\u001a\u00020\u0019\u0012\n\u0008\u0002\u00104\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u00105\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u00086\u00107R\u001e\u0010\u0002\u001a\u00020\u00038\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00088\u00109\"\u0004\u0008:\u0010;R\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008<\u00109\"\u0004\u0008=\u0010;R\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008>\u00109\"\u0004\u0008?\u0010;R\u001a\u0010\u0006\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008@\u0010A\"\u0004\u0008B\u0010CR\u001a\u0010\u0008\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008D\u0010A\"\u0004\u0008E\u0010CR\u001a\u0010\t\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008F\u0010A\"\u0004\u0008G\u0010CR\u001a\u0010\n\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008H\u0010A\"\u0004\u0008I\u0010CR\u001a\u0010\u000b\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008J\u0010A\"\u0004\u0008K\u0010CR\u001a\u0010\u000c\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008L\u0010A\"\u0004\u0008M\u0010CR\u001a\u0010\r\u001a\u00020\u000eX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008N\u0010O\"\u0004\u0008P\u0010QR\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008R\u00109\"\u0004\u0008S\u0010;R\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008T\u00109\"\u0004\u0008U\u0010;R\u001a\u0010\u0011\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008V\u0010A\"\u0004\u0008W\u0010CR\u001a\u0010\u0012\u001a\u00020\u0013X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008X\u0010Y\"\u0004\u0008Z\u0010[R\u001e\u0010\u0014\u001a\u0004\u0018\u00010\u0013X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010`\u001a\u0004\u0008\\\u0010]\"\u0004\u0008^\u0010_R\u001a\u0010\u0015\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008a\u0010A\"\u0004\u0008b\u0010CR\u001a\u0010\u0016\u001a\u00020\u0013X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008c\u0010Y\"\u0004\u0008d\u0010[R\u001c\u0010\u0017\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008e\u00109\"\u0004\u0008f\u0010;R\u001a\u0010\u0018\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008g\u0010h\"\u0004\u0008i\u0010jR\u001a\u0010\u001a\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008k\u0010h\"\u0004\u0008l\u0010jR\u001e\u0010\u001b\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010q\u001a\u0004\u0008m\u0010n\"\u0004\u0008o\u0010pR\"\u0010\u001c\u001a\n\u0012\u0004\u0012\u00020\u001e\u0018\u00010\u001dX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008r\u0010s\"\u0004\u0008t\u0010uR\u001a\u0010\u001f\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008v\u0010h\"\u0004\u0008w\u0010jR\u001a\u0010 \u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008x\u0010h\"\u0004\u0008y\u0010jR\u001a\u0010!\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008z\u0010A\"\u0004\u0008{\u0010CR\u001a\u0010\"\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008|\u0010A\"\u0004\u0008}\u0010CR\u001e\u0010#\u001a\u0004\u0018\u00010$X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0004\u0008~\u0010\u007f\"\u0006\u0008\u0080\u0001\u0010\u0081\u0001R\u001c\u0010%\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0082\u0001\u0010h\"\u0005\u0008\u0083\u0001\u0010jR\u001e\u0010&\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0084\u0001\u00109\"\u0005\u0008\u0085\u0001\u0010;R$\u0010\'\u001a\n\u0012\u0004\u0012\u00020(\u0018\u00010\u001dX\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0086\u0001\u0010s\"\u0005\u0008\u0087\u0001\u0010uR\u001e\u0010)\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0088\u0001\u00109\"\u0005\u0008\u0089\u0001\u0010;R\u001e\u0010*\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u008a\u0001\u00109\"\u0005\u0008\u008b\u0001\u0010;R \u0010+\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u0012\n\u0002\u0010q\u001a\u0005\u0008\u008c\u0001\u0010n\"\u0005\u0008\u008d\u0001\u0010pR\u001c\u0010,\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u008e\u0001\u0010h\"\u0005\u0008\u008f\u0001\u0010jR \u0010-\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u0012\n\u0002\u0010q\u001a\u0005\u0008\u0090\u0001\u0010n\"\u0005\u0008\u0091\u0001\u0010pR\u001e\u0010.\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0092\u0001\u00109\"\u0005\u0008\u0093\u0001\u0010;R \u0010/\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u0012\n\u0002\u0010q\u001a\u0005\u0008\u0094\u0001\u0010n\"\u0005\u0008\u0095\u0001\u0010pR\u001c\u00100\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0096\u0001\u0010h\"\u0005\u0008\u0097\u0001\u0010jR\u001c\u00101\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u0098\u0001\u0010h\"\u0005\u0008\u0099\u0001\u0010jR\u001c\u00102\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u009a\u0001\u0010h\"\u0005\u0008\u009b\u0001\u0010jR\u001c\u00103\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u009c\u0001\u0010h\"\u0005\u0008\u009d\u0001\u0010jR \u00104\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u0012\n\u0002\u0010q\u001a\u0005\u0008\u009e\u0001\u0010n\"\u0005\u0008\u009f\u0001\u0010pR\u001e\u00105\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u0010\n\u0000\u001a\u0005\u0008\u00a0\u0001\u00109\"\u0005\u0008\u00a1\u0001\u0010;R\u000f\u0010\u00a2\u0001\u001a\u00020\u0003X\u0082\u000e\u00a2\u0006\u0002\n\u0000R,\u0010\u00a5\u0001\u001a\u00030\u00a4\u00012\u0008\u0010\u00a3\u0001\u001a\u00030\u00a4\u00018F@FX\u0086\u000e\u00a2\u0006\u0010\u001a\u0006\u0008\u00a6\u0001\u0010\u00a7\u0001\"\u0006\u0008\u00a8\u0001\u0010\u00a9\u0001R\u000f\u0010\u00aa\u0001\u001a\u00020\u0003X\u0082\u000e\u00a2\u0006\u0002\n\u0000R,\u0010\u00ab\u0001\u001a\u00030\u00a4\u00012\u0008\u0010\u00a3\u0001\u001a\u00030\u00a4\u00018F@FX\u0086\u000e\u00a2\u0006\u0010\u001a\u0006\u0008\u00ac\u0001\u0010\u00a7\u0001\"\u0006\u0008\u00ad\u0001\u0010\u00a9\u0001R\u000f\u0010\u00ae\u0001\u001a\u00020\u0003X\u0082\u000e\u00a2\u0006\u0002\n\u0000R,\u0010\u00af\u0001\u001a\u00030\u00a4\u00012\u0008\u0010\u00a3\u0001\u001a\u00030\u00a4\u00018F@FX\u0086\u000e\u00a2\u0006\u0010\u001a\u0006\u0008\u00b0\u0001\u0010\u00a7\u0001\"\u0006\u0008\u00b1\u0001\u0010\u00a9\u0001R\u000f\u0010\u00b2\u0001\u001a\u00020\u0003X\u0082\u000e\u00a2\u0006\u0002\n\u0000R,\u0010\u00b3\u0001\u001a\u00030\u00a4\u00012\u0008\u0010\u00a3\u0001\u001a\u00030\u00a4\u00018F@FX\u0086\u000e\u00a2\u0006\u0010\u001a\u0006\u0008\u00b4\u0001\u0010\u00a7\u0001\"\u0006\u0008\u00b5\u0001\u0010\u00a9\u0001\u00a8\u0006\u00b6\u0001"
+    }
+    d2 = {
+        "Lcom/sitael/vending/persistence/entity/WalletRealmEntity;",
+        "Lio/realm/RealmObject;",
+        "walletBrand",
+        "",
+        "walletLocalNamePrefix",
+        "walletName",
+        "walletFreeVend",
+        "",
+        "walletFreeVendCold",
+        "walletFreeVendSnack",
+        "walletFreeVendMixed",
+        "walletFreeVendNonFood",
+        "walletFreeRecycle",
+        "walletLastUpdate",
+        "",
+        "walletCountryCode",
+        "walletCurrencyCode",
+        "walletDecimalPlaces",
+        "walletOnlineRechargeStep",
+        "",
+        "walletDefaultOnlineRechargeStep",
+        "walletOnlineRechargeMaxStepNum",
+        "walletMicroCreditStep",
+        "walletOnlineRechargeService",
+        "walletRechargeServiceWorksWithNotification",
+        "",
+        "walletOnlineRechargeServiceSupportOneClick",
+        "walletTotPagopaPaymentsNotConfirmed",
+        "walletServices",
+        "Lio/realm/RealmList;",
+        "Lcom/sitael/vending/persistence/entity/WalletServicesRealmEntity;",
+        "walletShowInAppBanner",
+        "walletHasCardNfc",
+        "walletPrivacyConsentThreshold",
+        "clubUserNumGift",
+        "currentClubEntity",
+        "Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;",
+        "walletHasCallFriendSession",
+        "walletBrandLogoUrl",
+        "walletServicePriorityItems",
+        "Lcom/sitael/vending/persistence/entity/WalletServicePriorityItemsRealmEntity;",
+        "walletFridgeReservationMode",
+        "walletCurrentFridgeReservationId",
+        "walletPromoCounter",
+        "walletTicketAutomationEnabled",
+        "walletTicketAutomationRequestTimeout",
+        "walletMainOfficeCod",
+        "walletTicketAutomationNetworkIssueThreshold",
+        "walletHasTicketHistory",
+        "walletOnlineRechargeServiceSupportTicketRealTimeRefund",
+        "walletNeverShowReservationUnavailable",
+        "walletHasCreditFridgeSupport",
+        "walletSurveyFromAccountNumber",
+        "walletPrefixesRegex",
+        "<init>",
+        "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIJLjava/lang/String;Ljava/lang/String;IDLjava/lang/Double;IDLjava/lang/String;ZZLjava/lang/Integer;Lio/realm/RealmList;ZZIILcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;ZLjava/lang/String;Lio/realm/RealmList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZLjava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ZZZZLjava/lang/Integer;Ljava/lang/String;)V",
+        "getWalletBrand",
+        "()Ljava/lang/String;",
+        "setWalletBrand",
+        "(Ljava/lang/String;)V",
+        "getWalletLocalNamePrefix",
+        "setWalletLocalNamePrefix",
+        "getWalletName",
+        "setWalletName",
+        "getWalletFreeVend",
+        "()I",
+        "setWalletFreeVend",
+        "(I)V",
+        "getWalletFreeVendCold",
+        "setWalletFreeVendCold",
+        "getWalletFreeVendSnack",
+        "setWalletFreeVendSnack",
+        "getWalletFreeVendMixed",
+        "setWalletFreeVendMixed",
+        "getWalletFreeVendNonFood",
+        "setWalletFreeVendNonFood",
+        "getWalletFreeRecycle",
+        "setWalletFreeRecycle",
+        "getWalletLastUpdate",
+        "()J",
+        "setWalletLastUpdate",
+        "(J)V",
+        "getWalletCountryCode",
+        "setWalletCountryCode",
+        "getWalletCurrencyCode",
+        "setWalletCurrencyCode",
+        "getWalletDecimalPlaces",
+        "setWalletDecimalPlaces",
+        "getWalletOnlineRechargeStep",
+        "()D",
+        "setWalletOnlineRechargeStep",
+        "(D)V",
+        "getWalletDefaultOnlineRechargeStep",
+        "()Ljava/lang/Double;",
+        "setWalletDefaultOnlineRechargeStep",
+        "(Ljava/lang/Double;)V",
+        "Ljava/lang/Double;",
+        "getWalletOnlineRechargeMaxStepNum",
+        "setWalletOnlineRechargeMaxStepNum",
+        "getWalletMicroCreditStep",
+        "setWalletMicroCreditStep",
+        "getWalletOnlineRechargeService",
+        "setWalletOnlineRechargeService",
+        "getWalletRechargeServiceWorksWithNotification",
+        "()Z",
+        "setWalletRechargeServiceWorksWithNotification",
+        "(Z)V",
+        "getWalletOnlineRechargeServiceSupportOneClick",
+        "setWalletOnlineRechargeServiceSupportOneClick",
+        "getWalletTotPagopaPaymentsNotConfirmed",
+        "()Ljava/lang/Integer;",
+        "setWalletTotPagopaPaymentsNotConfirmed",
+        "(Ljava/lang/Integer;)V",
+        "Ljava/lang/Integer;",
+        "getWalletServices",
+        "()Lio/realm/RealmList;",
+        "setWalletServices",
+        "(Lio/realm/RealmList;)V",
+        "getWalletShowInAppBanner",
+        "setWalletShowInAppBanner",
+        "getWalletHasCardNfc",
+        "setWalletHasCardNfc",
+        "getWalletPrivacyConsentThreshold",
+        "setWalletPrivacyConsentThreshold",
+        "getClubUserNumGift",
+        "setClubUserNumGift",
+        "getCurrentClubEntity",
+        "()Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;",
+        "setCurrentClubEntity",
+        "(Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;)V",
+        "getWalletHasCallFriendSession",
+        "setWalletHasCallFriendSession",
+        "getWalletBrandLogoUrl",
+        "setWalletBrandLogoUrl",
+        "getWalletServicePriorityItems",
+        "setWalletServicePriorityItems",
+        "getWalletFridgeReservationMode",
+        "setWalletFridgeReservationMode",
+        "getWalletCurrentFridgeReservationId",
+        "setWalletCurrentFridgeReservationId",
+        "getWalletPromoCounter",
+        "setWalletPromoCounter",
+        "getWalletTicketAutomationEnabled",
+        "setWalletTicketAutomationEnabled",
+        "getWalletTicketAutomationRequestTimeout",
+        "setWalletTicketAutomationRequestTimeout",
+        "getWalletMainOfficeCod",
+        "setWalletMainOfficeCod",
+        "getWalletTicketAutomationNetworkIssueThreshold",
+        "setWalletTicketAutomationNetworkIssueThreshold",
+        "getWalletHasTicketHistory",
+        "setWalletHasTicketHistory",
+        "getWalletOnlineRechargeServiceSupportTicketRealTimeRefund",
+        "setWalletOnlineRechargeServiceSupportTicketRealTimeRefund",
+        "getWalletNeverShowReservationUnavailable",
+        "setWalletNeverShowReservationUnavailable",
+        "getWalletHasCreditFridgeSupport",
+        "setWalletHasCreditFridgeSupport",
+        "getWalletSurveyFromAccountNumber",
+        "setWalletSurveyFromAccountNumber",
+        "getWalletPrefixesRegex",
+        "setWalletPrefixesRegex",
+        "walletCreditField",
+        "value",
+        "Ljava/math/BigDecimal;",
+        "walletCredit",
+        "getWalletCredit",
+        "()Ljava/math/BigDecimal;",
+        "setWalletCredit",
+        "(Ljava/math/BigDecimal;)V",
+        "walletMaxVmCreditField",
+        "walletMaxVmCredit",
+        "getWalletMaxVmCredit",
+        "setWalletMaxVmCredit",
+        "walletMaxVmCreditPagoPaField",
+        "walletMaxVmCreditPagoPa",
+        "getWalletMaxVmCreditPagoPa",
+        "setWalletMaxVmCreditPagoPa",
+        "walletMaxAmountField",
+        "walletMaxAmount",
+        "getWalletMaxAmount",
+        "setWalletMaxAmount",
+        "mobile_argentaProductionGmsRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
+
+
+# instance fields
+.field private clubUserNumGift:I
+
+.field private currentClubEntity:Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;
+
+.field private walletBrand:Ljava/lang/String;
+    .annotation runtime Lio/realm/annotations/PrimaryKey;
+    .end annotation
+.end field
+
+.field private walletBrandLogoUrl:Ljava/lang/String;
+
+.field private walletCountryCode:Ljava/lang/String;
+
+.field private walletCreditField:Ljava/lang/String;
+
+.field private walletCurrencyCode:Ljava/lang/String;
+
+.field private walletCurrentFridgeReservationId:Ljava/lang/String;
+
+.field private walletDecimalPlaces:I
+
+.field private walletDefaultOnlineRechargeStep:Ljava/lang/Double;
+
+.field private walletFreeRecycle:I
+
+.field private walletFreeVend:I
+
+.field private walletFreeVendCold:I
+
+.field private walletFreeVendMixed:I
+
+.field private walletFreeVendNonFood:I
+
+.field private walletFreeVendSnack:I
+
+.field private walletFridgeReservationMode:Ljava/lang/String;
+
+.field private walletHasCallFriendSession:Z
+
+.field private walletHasCardNfc:Z
+
+.field private walletHasCreditFridgeSupport:Z
+
+.field private walletHasTicketHistory:Z
+
+.field private walletLastUpdate:J
+
+.field private walletLocalNamePrefix:Ljava/lang/String;
+
+.field private walletMainOfficeCod:Ljava/lang/String;
+
+.field private walletMaxAmountField:Ljava/lang/String;
+
+.field private walletMaxVmCreditField:Ljava/lang/String;
+
+.field private walletMaxVmCreditPagoPaField:Ljava/lang/String;
+
+.field private walletMicroCreditStep:D
+
+.field private walletName:Ljava/lang/String;
+
+.field private walletNeverShowReservationUnavailable:Z
+
+.field private walletOnlineRechargeMaxStepNum:I
+
+.field private walletOnlineRechargeService:Ljava/lang/String;
+
+.field private walletOnlineRechargeServiceSupportOneClick:Z
+
+.field private walletOnlineRechargeServiceSupportTicketRealTimeRefund:Z
+
+.field private walletOnlineRechargeStep:D
+
+.field private walletPrefixesRegex:Ljava/lang/String;
+
+.field private walletPrivacyConsentThreshold:I
+
+.field private walletPromoCounter:Ljava/lang/Integer;
+
+.field private walletRechargeServiceWorksWithNotification:Z
+
+.field private walletServicePriorityItems:Lio/realm/RealmList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicePriorityItemsRealmEntity;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private walletServices:Lio/realm/RealmList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicesRealmEntity;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private walletShowInAppBanner:Z
+
+.field private walletSurveyFromAccountNumber:Ljava/lang/Integer;
+
+.field private walletTicketAutomationEnabled:Z
+
+.field private walletTicketAutomationNetworkIssueThreshold:Ljava/lang/Integer;
+
+.field private walletTicketAutomationRequestTimeout:Ljava/lang/Integer;
+
+.field private walletTotPagopaPaymentsNotConfirmed:Ljava/lang/Integer;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 50
+
+    const/16 v48, 0x7ff
+
+    const/16 v49, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const-wide/16 v15, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const-wide/16 v19, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    const/16 v25, 0x0
+
+    const/16 v26, 0x0
+
+    const/16 v27, 0x0
+
+    const/16 v28, 0x0
+
+    const/16 v29, 0x0
+
+    const/16 v30, 0x0
+
+    const/16 v31, 0x0
+
+    const/16 v32, 0x0
+
+    const/16 v33, 0x0
+
+    const/16 v34, 0x0
+
+    const/16 v35, 0x0
+
+    const/16 v36, 0x0
+
+    const/16 v37, 0x0
+
+    const/16 v38, 0x0
+
+    const/16 v39, 0x0
+
+    const/16 v40, 0x0
+
+    const/16 v41, 0x0
+
+    const/16 v42, 0x0
+
+    const/16 v43, 0x0
+
+    const/16 v44, 0x0
+
+    const/16 v45, 0x0
+
+    const/16 v46, 0x0
+
+    const/16 v47, -0x1
+
+    move-object/from16 v0, p0
+
+    invoke-direct/range {v0 .. v49}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIJLjava/lang/String;Ljava/lang/String;IDLjava/lang/Double;IDLjava/lang/String;ZZLjava/lang/Integer;Lio/realm/RealmList;ZZIILcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;ZLjava/lang/String;Lio/realm/RealmList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZLjava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ZZZZLjava/lang/Integer;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    instance-of v1, v0, Lio/realm/internal/RealmObjectProxy;
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Lio/realm/internal/RealmObjectProxy;
+
+    invoke-interface {v1}, Lio/realm/internal/RealmObjectProxy;->realm$injectObjectContext()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIJLjava/lang/String;Ljava/lang/String;IDLjava/lang/Double;IDLjava/lang/String;ZZLjava/lang/Integer;Lio/realm/RealmList;ZZIILcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;ZLjava/lang/String;Lio/realm/RealmList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZLjava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ZZZZLjava/lang/Integer;Ljava/lang/String;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "IIIIIIJ",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "ID",
+            "Ljava/lang/Double;",
+            "ID",
+            "Ljava/lang/String;",
+            "ZZ",
+            "Ljava/lang/Integer;",
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicesRealmEntity;",
+            ">;ZZII",
+            "Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;",
+            "Z",
+            "Ljava/lang/String;",
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicePriorityItemsRealmEntity;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            "Z",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            "ZZZZ",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    const-string v0, "walletBrand"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 68
+    invoke-direct {p0}, Lio/realm/RealmObject;-><init>()V
+
+    instance-of v0, p0, Lio/realm/internal/RealmObjectProxy;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lio/realm/internal/RealmObjectProxy;
+
+    invoke-interface {v0}, Lio/realm/internal/RealmObjectProxy;->realm$injectObjectContext()V
+
+    .line 12
+    :cond_0
+    invoke-virtual/range {p0 .. p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletBrand(Ljava/lang/String;)V
+
+    .line 13
+    invoke-virtual {p0, p2}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletLocalNamePrefix(Ljava/lang/String;)V
+
+    .line 14
+    invoke-virtual {p0, p3}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletName(Ljava/lang/String;)V
+
+    .line 15
+    invoke-virtual {p0, p4}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVend(I)V
+
+    .line 16
+    invoke-virtual {p0, p5}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendCold(I)V
+
+    .line 17
+    invoke-virtual {p0, p6}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendSnack(I)V
+
+    .line 18
+    invoke-virtual {p0, p7}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendMixed(I)V
+
+    .line 19
+    invoke-virtual {p0, p8}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendNonFood(I)V
+
+    .line 20
+    invoke-virtual {p0, p9}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeRecycle(I)V
+
+    .line 21
+    invoke-virtual {p0, p10, p11}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletLastUpdate(J)V
+
+    .line 22
+    invoke-virtual {p0, p12}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCountryCode(Ljava/lang/String;)V
+
+    .line 23
+    invoke-virtual {p0, p13}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCurrencyCode(Ljava/lang/String;)V
+
+    .line 24
+    invoke-virtual {p0, p14}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletDecimalPlaces(I)V
+
+    move-wide/from16 p1, p15
+
+    .line 25
+    invoke-virtual {p0, p1, p2}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeStep(D)V
+
+    move-object/from16 p1, p17
+
+    .line 26
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletDefaultOnlineRechargeStep(Ljava/lang/Double;)V
+
+    move/from16 p1, p18
+
+    .line 27
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeMaxStepNum(I)V
+
+    move-wide/from16 p1, p19
+
+    .line 28
+    invoke-virtual {p0, p1, p2}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMicroCreditStep(D)V
+
+    move-object/from16 p1, p21
+
+    .line 29
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeService(Ljava/lang/String;)V
+
+    move/from16 p1, p22
+
+    .line 30
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletRechargeServiceWorksWithNotification(Z)V
+
+    move/from16 p1, p23
+
+    .line 31
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeServiceSupportOneClick(Z)V
+
+    move-object/from16 p1, p24
+
+    .line 41
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTotPagopaPaymentsNotConfirmed(Ljava/lang/Integer;)V
+
+    move-object/from16 p1, p25
+
+    .line 42
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletServices(Lio/realm/RealmList;)V
+
+    move/from16 p1, p26
+
+    .line 43
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletShowInAppBanner(Z)V
+
+    move/from16 p1, p27
+
+    .line 44
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasCardNfc(Z)V
+
+    move/from16 p1, p28
+
+    .line 45
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletPrivacyConsentThreshold(I)V
+
+    move/from16 p1, p29
+
+    .line 46
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$clubUserNumGift(I)V
+
+    move-object/from16 p1, p30
+
+    .line 47
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$currentClubEntity(Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;)V
+
+    move/from16 p1, p31
+
+    .line 48
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasCallFriendSession(Z)V
+
+    move-object/from16 p1, p32
+
+    .line 49
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletBrandLogoUrl(Ljava/lang/String;)V
+
+    move-object/from16 p1, p33
+
+    .line 50
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletServicePriorityItems(Lio/realm/RealmList;)V
+
+    move-object/from16 p1, p34
+
+    .line 52
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFridgeReservationMode(Ljava/lang/String;)V
+
+    move-object/from16 p1, p35
+
+    .line 53
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCurrentFridgeReservationId(Ljava/lang/String;)V
+
+    move-object/from16 p1, p36
+
+    .line 54
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletPromoCounter(Ljava/lang/Integer;)V
+
+    move/from16 p1, p37
+
+    .line 55
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTicketAutomationEnabled(Z)V
+
+    move-object/from16 p1, p38
+
+    .line 56
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTicketAutomationRequestTimeout(Ljava/lang/Integer;)V
+
+    move-object/from16 p1, p39
+
+    .line 57
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMainOfficeCod(Ljava/lang/String;)V
+
+    move-object/from16 p1, p40
+
+    .line 58
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTicketAutomationNetworkIssueThreshold(Ljava/lang/Integer;)V
+
+    move/from16 p1, p41
+
+    .line 59
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasTicketHistory(Z)V
+
+    move/from16 p1, p42
+
+    .line 60
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeServiceSupportTicketRealTimeRefund(Z)V
+
+    move/from16 p1, p43
+
+    .line 61
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletNeverShowReservationUnavailable(Z)V
+
+    move/from16 p1, p44
+
+    .line 62
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasCreditFridgeSupport(Z)V
+
+    move-object/from16 p1, p45
+
+    .line 63
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletSurveyFromAccountNumber(Ljava/lang/Integer;)V
+
+    move-object/from16 p1, p46
+
+    .line 67
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletPrefixesRegex(Ljava/lang/String;)V
+
+    .line 70
+    sget-object p1, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "toString(...)"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCreditField(Ljava/lang/String;)V
+
+    .line 76
+    sget-object p1, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMaxVmCreditField(Ljava/lang/String;)V
+
+    .line 83
+    new-instance p1, Ljava/math/BigDecimal;
+
+    const/4 p3, -0x1
+
+    invoke-direct {p1, p3}, Ljava/math/BigDecimal;-><init>(I)V
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMaxVmCreditPagoPaField(Ljava/lang/String;)V
+
+    .line 91
+    new-instance p1, Ljava/math/BigDecimal;
+
+    invoke-direct {p1, p3}, Ljava/math/BigDecimal;-><init>(I)V
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMaxAmountField(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIJLjava/lang/String;Ljava/lang/String;IDLjava/lang/Double;IDLjava/lang/String;ZZLjava/lang/Integer;Lio/realm/RealmList;ZZIILcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;ZLjava/lang/String;Lio/realm/RealmList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZLjava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ZZZZLjava/lang/Integer;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 41
+
+    move/from16 v0, p47
+
+    move/from16 v1, p48
+
+    and-int/lit8 v2, v0, 0x1
+
+    .line 11
+    const-string v3, ""
+
+    if-eqz v2, :cond_0
+
+    move-object v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 v2, p1
+
+    :goto_0
+    and-int/lit8 v4, v0, 0x2
+
+    if-eqz v4, :cond_1
+
+    const/4 v4, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 v4, p2
+
+    :goto_1
+    and-int/lit8 v6, v0, 0x4
+
+    if-eqz v6, :cond_2
+
+    const/4 v6, 0x0
+
+    goto :goto_2
+
+    :cond_2
+    move-object/from16 v6, p3
+
+    :goto_2
+    and-int/lit8 v7, v0, 0x8
+
+    if-eqz v7, :cond_3
+
+    const/4 v7, 0x0
+
+    goto :goto_3
+
+    :cond_3
+    move/from16 v7, p4
+
+    :goto_3
+    and-int/lit8 v9, v0, 0x10
+
+    if-eqz v9, :cond_4
+
+    const/4 v9, 0x0
+
+    goto :goto_4
+
+    :cond_4
+    move/from16 v9, p5
+
+    :goto_4
+    and-int/lit8 v10, v0, 0x20
+
+    if-eqz v10, :cond_5
+
+    const/4 v10, 0x0
+
+    goto :goto_5
+
+    :cond_5
+    move/from16 v10, p6
+
+    :goto_5
+    and-int/lit8 v11, v0, 0x40
+
+    if-eqz v11, :cond_6
+
+    const/4 v11, 0x0
+
+    goto :goto_6
+
+    :cond_6
+    move/from16 v11, p7
+
+    :goto_6
+    and-int/lit16 v12, v0, 0x80
+
+    if-eqz v12, :cond_7
+
+    const/4 v12, 0x0
+
+    goto :goto_7
+
+    :cond_7
+    move/from16 v12, p8
+
+    :goto_7
+    and-int/lit16 v13, v0, 0x100
+
+    if-eqz v13, :cond_8
+
+    const/4 v13, 0x0
+
+    goto :goto_8
+
+    :cond_8
+    move/from16 v13, p9
+
+    :goto_8
+    and-int/lit16 v14, v0, 0x200
+
+    if-eqz v14, :cond_9
+
+    const-wide/16 v14, 0x0
+
+    goto :goto_9
+
+    :cond_9
+    move-wide/from16 v14, p10
+
+    :goto_9
+    and-int/lit16 v5, v0, 0x400
+
+    if-eqz v5, :cond_a
+
+    const/4 v5, 0x0
+
+    goto :goto_a
+
+    :cond_a
+    move-object/from16 v5, p12
+
+    :goto_a
+    const/16 p2, 0x0
+
+    and-int/lit16 v8, v0, 0x800
+
+    if-eqz v8, :cond_b
+
+    const/4 v8, 0x0
+
+    goto :goto_b
+
+    :cond_b
+    move-object/from16 v8, p13
+
+    :goto_b
+    move-object/from16 p49, v2
+
+    and-int/lit16 v2, v0, 0x1000
+
+    if-eqz v2, :cond_c
+
+    move/from16 v2, p2
+
+    goto :goto_c
+
+    :cond_c
+    move/from16 v2, p14
+
+    :goto_c
+    move/from16 p3, v2
+
+    and-int/lit16 v2, v0, 0x2000
+
+    const-wide/16 v16, 0x0
+
+    if-eqz v2, :cond_d
+
+    move-wide/from16 v18, v16
+
+    goto :goto_d
+
+    :cond_d
+    move-wide/from16 v18, p15
+
+    :goto_d
+    and-int/lit16 v2, v0, 0x4000
+
+    if-eqz v2, :cond_e
+
+    const/4 v2, 0x0
+
+    goto :goto_e
+
+    :cond_e
+    move-object/from16 v2, p17
+
+    :goto_e
+    const v20, 0x8000
+
+    and-int v20, v0, v20
+
+    if-eqz v20, :cond_f
+
+    move/from16 v20, p2
+
+    goto :goto_f
+
+    :cond_f
+    move/from16 v20, p18
+
+    :goto_f
+    const/high16 v21, 0x10000
+
+    and-int v21, v0, v21
+
+    if-eqz v21, :cond_10
+
+    goto :goto_10
+
+    :cond_10
+    move-wide/from16 v16, p19
+
+    :goto_10
+    const/high16 v21, 0x20000
+
+    and-int v21, v0, v21
+
+    if-eqz v21, :cond_11
+
+    const/16 v21, 0x0
+
+    goto :goto_11
+
+    :cond_11
+    move-object/from16 v21, p21
+
+    :goto_11
+    const/high16 v22, 0x40000
+
+    and-int v22, v0, v22
+
+    if-eqz v22, :cond_12
+
+    move/from16 v22, p2
+
+    goto :goto_12
+
+    :cond_12
+    move/from16 v22, p22
+
+    :goto_12
+    const/high16 v23, 0x80000
+
+    and-int v23, v0, v23
+
+    if-eqz v23, :cond_13
+
+    move/from16 v23, p2
+
+    goto :goto_13
+
+    :cond_13
+    move/from16 v23, p23
+
+    :goto_13
+    const/high16 v24, 0x100000
+
+    and-int v24, v0, v24
+
+    if-eqz v24, :cond_14
+
+    const/16 v24, 0x0
+
+    goto :goto_14
+
+    :cond_14
+    move-object/from16 v24, p24
+
+    :goto_14
+    const/high16 v25, 0x200000
+
+    and-int v25, v0, v25
+
+    if-eqz v25, :cond_15
+
+    const/16 v25, 0x0
+
+    goto :goto_15
+
+    :cond_15
+    move-object/from16 v25, p25
+
+    :goto_15
+    const/high16 v26, 0x400000
+
+    and-int v26, v0, v26
+
+    if-eqz v26, :cond_16
+
+    move/from16 v26, p2
+
+    goto :goto_16
+
+    :cond_16
+    move/from16 v26, p26
+
+    :goto_16
+    const/high16 v27, 0x800000
+
+    and-int v27, v0, v27
+
+    if-eqz v27, :cond_17
+
+    move/from16 v27, p2
+
+    goto :goto_17
+
+    :cond_17
+    move/from16 v27, p27
+
+    :goto_17
+    const/high16 v28, 0x1000000
+
+    and-int v28, v0, v28
+
+    if-eqz v28, :cond_18
+
+    move/from16 v28, p2
+
+    goto :goto_18
+
+    :cond_18
+    move/from16 v28, p28
+
+    :goto_18
+    const/high16 v29, 0x2000000
+
+    and-int v29, v0, v29
+
+    if-eqz v29, :cond_19
+
+    move/from16 v29, p2
+
+    goto :goto_19
+
+    :cond_19
+    move/from16 v29, p29
+
+    :goto_19
+    const/high16 v30, 0x4000000
+
+    and-int v30, v0, v30
+
+    if-eqz v30, :cond_1a
+
+    const/16 v30, 0x0
+
+    goto :goto_1a
+
+    :cond_1a
+    move-object/from16 v30, p30
+
+    :goto_1a
+    const/high16 v31, 0x8000000
+
+    and-int v31, v0, v31
+
+    if-eqz v31, :cond_1b
+
+    move/from16 v31, p2
+
+    goto :goto_1b
+
+    :cond_1b
+    move/from16 v31, p31
+
+    :goto_1b
+    const/high16 v32, 0x10000000
+
+    and-int v32, v0, v32
+
+    if-eqz v32, :cond_1c
+
+    const/16 v32, 0x0
+
+    goto :goto_1c
+
+    :cond_1c
+    move-object/from16 v32, p32
+
+    :goto_1c
+    const/high16 v33, 0x20000000
+
+    and-int v33, v0, v33
+
+    if-eqz v33, :cond_1d
+
+    const/16 v33, 0x0
+
+    goto :goto_1d
+
+    :cond_1d
+    move-object/from16 v33, p33
+
+    :goto_1d
+    const/high16 v34, 0x40000000    # 2.0f
+
+    and-int v34, v0, v34
+
+    if-eqz v34, :cond_1e
+
+    goto :goto_1e
+
+    :cond_1e
+    move-object/from16 v3, p34
+
+    :goto_1e
+    const/high16 v34, -0x80000000
+
+    and-int v0, v0, v34
+
+    if-eqz v0, :cond_1f
+
+    const/4 v0, 0x0
+
+    goto :goto_1f
+
+    :cond_1f
+    move-object/from16 v0, p35
+
+    :goto_1f
+    and-int/lit8 v34, v1, 0x1
+
+    if-eqz v34, :cond_20
+
+    .line 54
+    invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v34
+
+    goto :goto_20
+
+    :cond_20
+    move-object/from16 v34, p36
+
+    :goto_20
+    and-int/lit8 v35, v1, 0x2
+
+    if-eqz v35, :cond_21
+
+    move/from16 v35, p2
+
+    goto :goto_21
+
+    :cond_21
+    move/from16 v35, p37
+
+    :goto_21
+    and-int/lit8 v36, v1, 0x4
+
+    if-eqz v36, :cond_22
+
+    const/16 v36, 0x0
+
+    goto :goto_22
+
+    :cond_22
+    move-object/from16 v36, p38
+
+    :goto_22
+    and-int/lit8 v37, v1, 0x8
+
+    if-eqz v37, :cond_23
+
+    const/16 v37, 0x0
+
+    goto :goto_23
+
+    :cond_23
+    move-object/from16 v37, p39
+
+    :goto_23
+    and-int/lit8 v38, v1, 0x10
+
+    if-eqz v38, :cond_24
+
+    const/16 v38, 0x0
+
+    goto :goto_24
+
+    :cond_24
+    move-object/from16 v38, p40
+
+    :goto_24
+    and-int/lit8 v39, v1, 0x20
+
+    if-eqz v39, :cond_25
+
+    move/from16 v39, p2
+
+    goto :goto_25
+
+    :cond_25
+    move/from16 v39, p41
+
+    :goto_25
+    and-int/lit8 v40, v1, 0x40
+
+    if-eqz v40, :cond_26
+
+    move/from16 v40, p2
+
+    goto :goto_26
+
+    :cond_26
+    move/from16 v40, p42
+
+    :goto_26
+    move-object/from16 p4, v0
+
+    and-int/lit16 v0, v1, 0x80
+
+    if-eqz v0, :cond_27
+
+    move/from16 v0, p2
+
+    goto :goto_27
+
+    :cond_27
+    move/from16 v0, p43
+
+    :goto_27
+    move/from16 p5, v0
+
+    and-int/lit16 v0, v1, 0x100
+
+    if-eqz v0, :cond_28
+
+    move/from16 v0, p2
+
+    goto :goto_28
+
+    :cond_28
+    move/from16 v0, p44
+
+    :goto_28
+    move/from16 p6, v0
+
+    and-int/lit16 v0, v1, 0x200
+
+    if-eqz v0, :cond_29
+
+    .line 63
+    invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_29
+
+    :cond_29
+    move-object/from16 v0, p45
+
+    :goto_29
+    and-int/lit16 v1, v1, 0x400
+
+    if-eqz v1, :cond_2a
+
+    const/16 p47, 0x0
+
+    goto :goto_2a
+
+    :cond_2a
+    move-object/from16 p47, p46
+
+    :goto_2a
+    move-object/from16 p1, p0
+
+    move/from16 p15, p3
+
+    move-object/from16 p36, p4
+
+    move/from16 p44, p5
+
+    move/from16 p45, p6
+
+    move-object/from16 p2, p49
+
+    move-object/from16 p46, v0
+
+    move-object/from16 p18, v2
+
+    move-object/from16 p35, v3
+
+    move-object/from16 p3, v4
+
+    move-object/from16 p13, v5
+
+    move-object/from16 p4, v6
+
+    move/from16 p5, v7
+
+    move-object/from16 p14, v8
+
+    move/from16 p6, v9
+
+    move/from16 p7, v10
+
+    move/from16 p8, v11
+
+    move/from16 p9, v12
+
+    move/from16 p10, v13
+
+    move-wide/from16 p11, v14
+
+    move-wide/from16 p20, v16
+
+    move-wide/from16 p16, v18
+
+    move/from16 p19, v20
+
+    move-object/from16 p22, v21
+
+    move/from16 p23, v22
+
+    move/from16 p24, v23
+
+    move-object/from16 p25, v24
+
+    move-object/from16 p26, v25
+
+    move/from16 p27, v26
+
+    move/from16 p28, v27
+
+    move/from16 p29, v28
+
+    move/from16 p30, v29
+
+    move-object/from16 p31, v30
+
+    move/from16 p32, v31
+
+    move-object/from16 p33, v32
+
+    move-object/from16 p34, v33
+
+    move-object/from16 p37, v34
+
+    move/from16 p38, v35
+
+    move-object/from16 p39, v36
+
+    move-object/from16 p40, v37
+
+    move-object/from16 p41, v38
+
+    move/from16 p42, v39
+
+    move/from16 p43, v40
+
+    .line 11
+    invoke-direct/range {p1 .. p47}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIJLjava/lang/String;Ljava/lang/String;IDLjava/lang/Double;IDLjava/lang/String;ZZLjava/lang/Integer;Lio/realm/RealmList;ZZIILcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;ZLjava/lang/String;Lio/realm/RealmList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZLjava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ZZZZLjava/lang/Integer;Ljava/lang/String;)V
+
+    move-object/from16 v0, p1
+
+    instance-of v1, v0, Lio/realm/internal/RealmObjectProxy;
+
+    if-eqz v1, :cond_2b
+
+    move-object v1, v0
+
+    check-cast v1, Lio/realm/internal/RealmObjectProxy;
+
+    invoke-interface {v1}, Lio/realm/internal/RealmObjectProxy;->realm$injectObjectContext()V
+
+    :cond_2b
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getClubUserNumGift()I
+    .locals 1
+
+    .line 46
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$clubUserNumGift()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getCurrentClubEntity()Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;
+    .locals 1
+
+    .line 47
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$currentClubEntity()Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletBrand()Ljava/lang/String;
+    .locals 1
+
+    .line 12
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletBrand()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletBrandLogoUrl()Ljava/lang/String;
+    .locals 1
+
+    .line 49
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletBrandLogoUrl()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletCountryCode()Ljava/lang/String;
+    .locals 1
+
+    .line 22
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletCountryCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletCredit()Ljava/math/BigDecimal;
+    .locals 2
+
+    .line 72
+    const-string v0, "5.00"
+
+    new-instance v1, Ljava/math/BigDecimal;
+
+    invoke-direct {v1, v0}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+.end method
+
+.method public final getWalletCurrencyCode()Ljava/lang/String;
+    .locals 1
+
+    .line 23
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletCurrencyCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletCurrentFridgeReservationId()Ljava/lang/String;
+    .locals 1
+
+    .line 53
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletCurrentFridgeReservationId()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletDecimalPlaces()I
+    .locals 1
+
+    .line 24
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletDecimalPlaces()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletDefaultOnlineRechargeStep()Ljava/lang/Double;
+    .locals 1
+
+    .line 26
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletDefaultOnlineRechargeStep()Ljava/lang/Double;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletFreeRecycle()I
+    .locals 1
+
+    .line 20
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFreeRecycle()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletFreeVend()I
+    .locals 1
+
+    .line 15
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFreeVend()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletFreeVendCold()I
+    .locals 1
+
+    .line 16
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFreeVendCold()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletFreeVendMixed()I
+    .locals 1
+
+    .line 18
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFreeVendMixed()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletFreeVendNonFood()I
+    .locals 1
+
+    .line 19
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFreeVendNonFood()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletFreeVendSnack()I
+    .locals 1
+
+    .line 17
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFreeVendSnack()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletFridgeReservationMode()Ljava/lang/String;
+    .locals 1
+
+    .line 52
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletFridgeReservationMode()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletHasCallFriendSession()Z
+    .locals 1
+
+    .line 48
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletHasCallFriendSession()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletHasCardNfc()Z
+    .locals 1
+
+    .line 44
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletHasCardNfc()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletHasCreditFridgeSupport()Z
+    .locals 1
+
+    .line 62
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletHasCreditFridgeSupport()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletHasTicketHistory()Z
+    .locals 1
+
+    .line 59
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletHasTicketHistory()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletLastUpdate()J
+    .locals 2
+
+    .line 21
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletLastUpdate()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final getWalletLocalNamePrefix()Ljava/lang/String;
+    .locals 1
+
+    .line 13
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletLocalNamePrefix()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletMainOfficeCod()Ljava/lang/String;
+    .locals 1
+
+    .line 57
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletMainOfficeCod()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletMaxAmount()Ljava/math/BigDecimal;
+    .locals 2
+
+    .line 94
+    new-instance v0, Ljava/math/BigDecimal;
+
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletMaxAmountField()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final getWalletMaxVmCredit()Ljava/math/BigDecimal;
+    .locals 2
+
+    .line 78
+    new-instance v0, Ljava/math/BigDecimal;
+
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletMaxVmCreditField()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final getWalletMaxVmCreditPagoPa()Ljava/math/BigDecimal;
+    .locals 2
+
+    .line 86
+    new-instance v0, Ljava/math/BigDecimal;
+
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletMaxVmCreditPagoPaField()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final getWalletMicroCreditStep()D
+    .locals 2
+
+    .line 28
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletMicroCreditStep()D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final getWalletName()Ljava/lang/String;
+    .locals 1
+
+    .line 14
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletNeverShowReservationUnavailable()Z
+    .locals 1
+
+    .line 61
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletNeverShowReservationUnavailable()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletOnlineRechargeMaxStepNum()I
+    .locals 1
+
+    .line 27
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletOnlineRechargeMaxStepNum()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletOnlineRechargeService()Ljava/lang/String;
+    .locals 1
+
+    .line 29
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletOnlineRechargeService()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletOnlineRechargeServiceSupportOneClick()Z
+    .locals 1
+
+    .line 31
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletOnlineRechargeServiceSupportOneClick()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletOnlineRechargeServiceSupportTicketRealTimeRefund()Z
+    .locals 1
+
+    .line 60
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletOnlineRechargeServiceSupportTicketRealTimeRefund()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletOnlineRechargeStep()D
+    .locals 2
+
+    .line 25
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletOnlineRechargeStep()D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final getWalletPrefixesRegex()Ljava/lang/String;
+    .locals 1
+
+    .line 67
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletPrefixesRegex()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletPrivacyConsentThreshold()I
+    .locals 1
+
+    .line 45
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletPrivacyConsentThreshold()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletPromoCounter()Ljava/lang/Integer;
+    .locals 1
+
+    .line 54
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletPromoCounter()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletRechargeServiceWorksWithNotification()Z
+    .locals 1
+
+    .line 30
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletRechargeServiceWorksWithNotification()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletServicePriorityItems()Lio/realm/RealmList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicePriorityItemsRealmEntity;",
+            ">;"
+        }
+    .end annotation
+
+    .line 50
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletServicePriorityItems()Lio/realm/RealmList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletServices()Lio/realm/RealmList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicesRealmEntity;",
+            ">;"
+        }
+    .end annotation
+
+    .line 42
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletServices()Lio/realm/RealmList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletShowInAppBanner()Z
+    .locals 1
+
+    .line 43
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletShowInAppBanner()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletSurveyFromAccountNumber()Ljava/lang/Integer;
+    .locals 1
+
+    .line 63
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletSurveyFromAccountNumber()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletTicketAutomationEnabled()Z
+    .locals 1
+
+    .line 55
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletTicketAutomationEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getWalletTicketAutomationNetworkIssueThreshold()Ljava/lang/Integer;
+    .locals 1
+
+    .line 58
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletTicketAutomationNetworkIssueThreshold()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletTicketAutomationRequestTimeout()Ljava/lang/Integer;
+    .locals 1
+
+    .line 56
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletTicketAutomationRequestTimeout()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getWalletTotPagopaPaymentsNotConfirmed()Ljava/lang/Integer;
+    .locals 1
+
+    .line 41
+    invoke-virtual {p0}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmGet$walletTotPagopaPaymentsNotConfirmed()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public realmGet$clubUserNumGift()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->clubUserNumGift:I
+
+    return v0
+.end method
+
+.method public realmGet$currentClubEntity()Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->currentClubEntity:Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletBrand()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletBrand:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletBrandLogoUrl()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletBrandLogoUrl:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletCountryCode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCountryCode:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletCreditField()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCreditField:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletCurrencyCode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCurrencyCode:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletCurrentFridgeReservationId()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCurrentFridgeReservationId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletDecimalPlaces()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletDecimalPlaces:I
+
+    return v0
+.end method
+
+.method public realmGet$walletDefaultOnlineRechargeStep()Ljava/lang/Double;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletDefaultOnlineRechargeStep:Ljava/lang/Double;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletFreeRecycle()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeRecycle:I
+
+    return v0
+.end method
+
+.method public realmGet$walletFreeVend()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVend:I
+
+    return v0
+.end method
+
+.method public realmGet$walletFreeVendCold()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendCold:I
+
+    return v0
+.end method
+
+.method public realmGet$walletFreeVendMixed()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendMixed:I
+
+    return v0
+.end method
+
+.method public realmGet$walletFreeVendNonFood()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendNonFood:I
+
+    return v0
+.end method
+
+.method public realmGet$walletFreeVendSnack()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendSnack:I
+
+    return v0
+.end method
+
+.method public realmGet$walletFridgeReservationMode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFridgeReservationMode:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletHasCallFriendSession()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasCallFriendSession:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletHasCardNfc()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasCardNfc:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletHasCreditFridgeSupport()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasCreditFridgeSupport:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletHasTicketHistory()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasTicketHistory:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletLastUpdate()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletLastUpdate:J
+
+    return-wide v0
+.end method
+
+.method public realmGet$walletLocalNamePrefix()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletLocalNamePrefix:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletMainOfficeCod()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMainOfficeCod:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletMaxAmountField()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMaxAmountField:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletMaxVmCreditField()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMaxVmCreditField:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletMaxVmCreditPagoPaField()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMaxVmCreditPagoPaField:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletMicroCreditStep()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMicroCreditStep:D
+
+    return-wide v0
+.end method
+
+.method public realmGet$walletName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletNeverShowReservationUnavailable()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletNeverShowReservationUnavailable:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletOnlineRechargeMaxStepNum()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeMaxStepNum:I
+
+    return v0
+.end method
+
+.method public realmGet$walletOnlineRechargeService()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeService:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletOnlineRechargeServiceSupportOneClick()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeServiceSupportOneClick:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletOnlineRechargeServiceSupportTicketRealTimeRefund()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeServiceSupportTicketRealTimeRefund:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletOnlineRechargeStep()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeStep:D
+
+    return-wide v0
+.end method
+
+.method public realmGet$walletPrefixesRegex()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletPrefixesRegex:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletPrivacyConsentThreshold()I
+    .locals 1
+
+    iget v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletPrivacyConsentThreshold:I
+
+    return v0
+.end method
+
+.method public realmGet$walletPromoCounter()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletPromoCounter:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletRechargeServiceWorksWithNotification()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletRechargeServiceWorksWithNotification:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletServicePriorityItems()Lio/realm/RealmList;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletServicePriorityItems:Lio/realm/RealmList;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletServices()Lio/realm/RealmList;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletServices:Lio/realm/RealmList;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletShowInAppBanner()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletShowInAppBanner:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletSurveyFromAccountNumber()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletSurveyFromAccountNumber:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletTicketAutomationEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTicketAutomationEnabled:Z
+
+    return v0
+.end method
+
+.method public realmGet$walletTicketAutomationNetworkIssueThreshold()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTicketAutomationNetworkIssueThreshold:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletTicketAutomationRequestTimeout()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTicketAutomationRequestTimeout:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public realmGet$walletTotPagopaPaymentsNotConfirmed()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTotPagopaPaymentsNotConfirmed:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public realmSet$clubUserNumGift(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->clubUserNumGift:I
+
+    return-void
+.end method
+
+.method public realmSet$currentClubEntity(Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->currentClubEntity:Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;
+
+    return-void
+.end method
+
+.method public realmSet$walletBrand(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletBrand:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletBrandLogoUrl(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletBrandLogoUrl:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletCountryCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCountryCode:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletCreditField(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCreditField:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletCurrencyCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCurrencyCode:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletCurrentFridgeReservationId(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletCurrentFridgeReservationId:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletDecimalPlaces(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletDecimalPlaces:I
+
+    return-void
+.end method
+
+.method public realmSet$walletDefaultOnlineRechargeStep(Ljava/lang/Double;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletDefaultOnlineRechargeStep:Ljava/lang/Double;
+
+    return-void
+.end method
+
+.method public realmSet$walletFreeRecycle(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeRecycle:I
+
+    return-void
+.end method
+
+.method public realmSet$walletFreeVend(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVend:I
+
+    return-void
+.end method
+
+.method public realmSet$walletFreeVendCold(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendCold:I
+
+    return-void
+.end method
+
+.method public realmSet$walletFreeVendMixed(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendMixed:I
+
+    return-void
+.end method
+
+.method public realmSet$walletFreeVendNonFood(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendNonFood:I
+
+    return-void
+.end method
+
+.method public realmSet$walletFreeVendSnack(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFreeVendSnack:I
+
+    return-void
+.end method
+
+.method public realmSet$walletFridgeReservationMode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletFridgeReservationMode:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletHasCallFriendSession(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasCallFriendSession:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletHasCardNfc(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasCardNfc:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletHasCreditFridgeSupport(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasCreditFridgeSupport:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletHasTicketHistory(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletHasTicketHistory:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletLastUpdate(J)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletLastUpdate:J
+
+    return-void
+.end method
+
+.method public realmSet$walletLocalNamePrefix(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletLocalNamePrefix:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletMainOfficeCod(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMainOfficeCod:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletMaxAmountField(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMaxAmountField:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletMaxVmCreditField(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMaxVmCreditField:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletMaxVmCreditPagoPaField(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMaxVmCreditPagoPaField:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletMicroCreditStep(D)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletMicroCreditStep:D
+
+    return-void
+.end method
+
+.method public realmSet$walletName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletName:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletNeverShowReservationUnavailable(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletNeverShowReservationUnavailable:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletOnlineRechargeMaxStepNum(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeMaxStepNum:I
+
+    return-void
+.end method
+
+.method public realmSet$walletOnlineRechargeService(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeService:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletOnlineRechargeServiceSupportOneClick(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeServiceSupportOneClick:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletOnlineRechargeServiceSupportTicketRealTimeRefund(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeServiceSupportTicketRealTimeRefund:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletOnlineRechargeStep(D)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletOnlineRechargeStep:D
+
+    return-void
+.end method
+
+.method public realmSet$walletPrefixesRegex(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletPrefixesRegex:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public realmSet$walletPrivacyConsentThreshold(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletPrivacyConsentThreshold:I
+
+    return-void
+.end method
+
+.method public realmSet$walletPromoCounter(Ljava/lang/Integer;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletPromoCounter:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public realmSet$walletRechargeServiceWorksWithNotification(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletRechargeServiceWorksWithNotification:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletServicePriorityItems(Lio/realm/RealmList;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletServicePriorityItems:Lio/realm/RealmList;
+
+    return-void
+.end method
+
+.method public realmSet$walletServices(Lio/realm/RealmList;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletServices:Lio/realm/RealmList;
+
+    return-void
+.end method
+
+.method public realmSet$walletShowInAppBanner(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletShowInAppBanner:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletSurveyFromAccountNumber(Ljava/lang/Integer;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletSurveyFromAccountNumber:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public realmSet$walletTicketAutomationEnabled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTicketAutomationEnabled:Z
+
+    return-void
+.end method
+
+.method public realmSet$walletTicketAutomationNetworkIssueThreshold(Ljava/lang/Integer;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTicketAutomationNetworkIssueThreshold:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public realmSet$walletTicketAutomationRequestTimeout(Ljava/lang/Integer;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTicketAutomationRequestTimeout:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public realmSet$walletTotPagopaPaymentsNotConfirmed(Ljava/lang/Integer;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->walletTotPagopaPaymentsNotConfirmed:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public final setClubUserNumGift(I)V
+    .locals 0
+
+    .line 46
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$clubUserNumGift(I)V
+
+    return-void
+.end method
+
+.method public final setCurrentClubEntity(Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;)V
+    .locals 0
+
+    .line 47
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$currentClubEntity(Lcom/sitael/vending/persistence/entity/CurrentClubRealmEntity;)V
+
+    return-void
+.end method
+
+.method public final setWalletBrand(Ljava/lang/String;)V
+    .locals 1
+
+    const-string v0, "<set-?>"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 12
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletBrand(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletBrandLogoUrl(Ljava/lang/String;)V
+    .locals 0
+
+    .line 49
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletBrandLogoUrl(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletCountryCode(Ljava/lang/String;)V
+    .locals 0
+
+    .line 22
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCountryCode(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletCredit(Ljava/math/BigDecimal;)V
+    .locals 1
+
+    const-string v0, "value"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p1, "5.00"
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCreditField(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletCurrencyCode(Ljava/lang/String;)V
+    .locals 0
+
+    .line 23
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCurrencyCode(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletCurrentFridgeReservationId(Ljava/lang/String;)V
+    .locals 0
+
+    .line 53
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletCurrentFridgeReservationId(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletDecimalPlaces(I)V
+    .locals 0
+
+    .line 24
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletDecimalPlaces(I)V
+
+    return-void
+.end method
+
+.method public final setWalletDefaultOnlineRechargeStep(Ljava/lang/Double;)V
+    .locals 0
+
+    .line 26
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletDefaultOnlineRechargeStep(Ljava/lang/Double;)V
+
+    return-void
+.end method
+
+.method public final setWalletFreeRecycle(I)V
+    .locals 0
+
+    .line 20
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeRecycle(I)V
+
+    return-void
+.end method
+
+.method public final setWalletFreeVend(I)V
+    .locals 0
+
+    .line 15
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVend(I)V
+
+    return-void
+.end method
+
+.method public final setWalletFreeVendCold(I)V
+    .locals 0
+
+    .line 16
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendCold(I)V
+
+    return-void
+.end method
+
+.method public final setWalletFreeVendMixed(I)V
+    .locals 0
+
+    .line 18
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendMixed(I)V
+
+    return-void
+.end method
+
+.method public final setWalletFreeVendNonFood(I)V
+    .locals 0
+
+    .line 19
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendNonFood(I)V
+
+    return-void
+.end method
+
+.method public final setWalletFreeVendSnack(I)V
+    .locals 0
+
+    .line 17
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFreeVendSnack(I)V
+
+    return-void
+.end method
+
+.method public final setWalletFridgeReservationMode(Ljava/lang/String;)V
+    .locals 0
+
+    .line 52
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletFridgeReservationMode(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletHasCallFriendSession(Z)V
+    .locals 0
+
+    .line 48
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasCallFriendSession(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletHasCardNfc(Z)V
+    .locals 0
+
+    .line 44
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasCardNfc(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletHasCreditFridgeSupport(Z)V
+    .locals 0
+
+    .line 62
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasCreditFridgeSupport(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletHasTicketHistory(Z)V
+    .locals 0
+
+    .line 59
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletHasTicketHistory(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletLastUpdate(J)V
+    .locals 0
+
+    .line 21
+    invoke-virtual {p0, p1, p2}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletLastUpdate(J)V
+
+    return-void
+.end method
+
+.method public final setWalletLocalNamePrefix(Ljava/lang/String;)V
+    .locals 0
+
+    .line 13
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletLocalNamePrefix(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletMainOfficeCod(Ljava/lang/String;)V
+    .locals 0
+
+    .line 57
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMainOfficeCod(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletMaxAmount(Ljava/math/BigDecimal;)V
+    .locals 1
+
+    const-string v0, "value"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 96
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMaxAmountField(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletMaxVmCredit(Ljava/math/BigDecimal;)V
+    .locals 1
+
+    const-string v0, "value"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 80
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMaxVmCreditField(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletMaxVmCreditPagoPa(Ljava/math/BigDecimal;)V
+    .locals 1
+
+    const-string v0, "value"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 88
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMaxVmCreditPagoPaField(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletMicroCreditStep(D)V
+    .locals 0
+
+    .line 28
+    invoke-virtual {p0, p1, p2}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletMicroCreditStep(D)V
+
+    return-void
+.end method
+
+.method public final setWalletName(Ljava/lang/String;)V
+    .locals 0
+
+    .line 14
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletName(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletNeverShowReservationUnavailable(Z)V
+    .locals 0
+
+    .line 61
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletNeverShowReservationUnavailable(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletOnlineRechargeMaxStepNum(I)V
+    .locals 0
+
+    .line 27
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeMaxStepNum(I)V
+
+    return-void
+.end method
+
+.method public final setWalletOnlineRechargeService(Ljava/lang/String;)V
+    .locals 0
+
+    .line 29
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeService(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletOnlineRechargeServiceSupportOneClick(Z)V
+    .locals 0
+
+    .line 31
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeServiceSupportOneClick(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletOnlineRechargeServiceSupportTicketRealTimeRefund(Z)V
+    .locals 0
+
+    .line 60
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeServiceSupportTicketRealTimeRefund(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletOnlineRechargeStep(D)V
+    .locals 0
+
+    .line 25
+    invoke-virtual {p0, p1, p2}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletOnlineRechargeStep(D)V
+
+    return-void
+.end method
+
+.method public final setWalletPrefixesRegex(Ljava/lang/String;)V
+    .locals 0
+
+    .line 67
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletPrefixesRegex(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final setWalletPrivacyConsentThreshold(I)V
+    .locals 0
+
+    .line 45
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletPrivacyConsentThreshold(I)V
+
+    return-void
+.end method
+
+.method public final setWalletPromoCounter(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 54
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletPromoCounter(Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public final setWalletRechargeServiceWorksWithNotification(Z)V
+    .locals 0
+
+    .line 30
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletRechargeServiceWorksWithNotification(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletServicePriorityItems(Lio/realm/RealmList;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicePriorityItemsRealmEntity;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 50
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletServicePriorityItems(Lio/realm/RealmList;)V
+
+    return-void
+.end method
+
+.method public final setWalletServices(Lio/realm/RealmList;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/realm/RealmList<",
+            "Lcom/sitael/vending/persistence/entity/WalletServicesRealmEntity;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 42
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletServices(Lio/realm/RealmList;)V
+
+    return-void
+.end method
+
+.method public final setWalletShowInAppBanner(Z)V
+    .locals 0
+
+    .line 43
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletShowInAppBanner(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletSurveyFromAccountNumber(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 63
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletSurveyFromAccountNumber(Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public final setWalletTicketAutomationEnabled(Z)V
+    .locals 0
+
+    .line 55
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTicketAutomationEnabled(Z)V
+
+    return-void
+.end method
+
+.method public final setWalletTicketAutomationNetworkIssueThreshold(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 58
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTicketAutomationNetworkIssueThreshold(Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public final setWalletTicketAutomationRequestTimeout(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 56
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTicketAutomationRequestTimeout(Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public final setWalletTotPagopaPaymentsNotConfirmed(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 41
+    invoke-virtual {p0, p1}, Lcom/sitael/vending/persistence/entity/WalletRealmEntity;->realmSet$walletTotPagopaPaymentsNotConfirmed(Ljava/lang/Integer;)V
+
+    return-void
+.end method
